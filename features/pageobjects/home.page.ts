@@ -50,6 +50,10 @@ class HomePage {
     public get itemPriceBikeLight() {
         return $('.inventory_item:nth-child(2) .inventory_item_price')
     }
-
+    public async addBackpackItemAndResetApp() {
+        await this.addButtonItemBackpack.click();
+        await  this.menuButton.click();
+        await this.resetAppStateButton.click();
+    }
 }
 export default new HomePage();

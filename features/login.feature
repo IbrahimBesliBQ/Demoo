@@ -8,7 +8,7 @@ Feature: Login functionality
 
     Examples:
         | username                | password     |
-        | standard_user           | secret_sauce |
+        | standard_users          | secret_sauce |
         | problem_user            | secret_sauce |
         
     
