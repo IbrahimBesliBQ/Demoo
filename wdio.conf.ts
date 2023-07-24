@@ -136,7 +136,7 @@ export const config: Options.Testrunner = {
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
     reporters: [['allure', {outputDir: './allure-results',disableWebdriverStepsReporting: true,
-    disableWebdriverScreenshotsReporting: true,}]],
+    disableWebdriverScreenshotsReporting: false,}]],
 
     //
     // If you are using Cucumber you need to specify the location of your step definitions.
@@ -266,8 +266,14 @@ export const config: Options.Testrunner = {
     //afterStep: async function (step, scenario, { error, duration, passed }, context) {
       //  if (error) {
        //   await browser.takeScreenshot();
-       // }
+   // }
+       afterStep: async function (step, scenario, { error, duration, passed }, context) {
+        if (error) {
+          await browser.takeScreenshot();
+        }
+      }
 }
+
     /**
      *
      * Runs after a Cucumber Scenario.

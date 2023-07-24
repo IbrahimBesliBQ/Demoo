@@ -73,3 +73,22 @@ Then(/^User can succesfull logout/, async () => {
     (await homePage.logoutButton).click();
      (await LoginPage.loginButton).isDisplayed();
 });
+Given(/^Standard_user logged in/, async () => {
+    await LoginPage.loginWithCr();
+});
+
+When(/^User log out from aplication/, async () => {
+    await homePage.menuButton.click();
+    await homePage.logoutButton.click();
+
+});
+Then(/^User display loginBttn/, async () => {
+    
+     (await LoginPage.loginButton).isDisplayed();
+});
+When(/^User add item and reset application/, async () => {
+    await homePage.addBackpackItemAndResetApp();
+});
+Then(/^Item is not selected/, async () => {
+    await expect(homePage.addButtonItemBackpack).toBeDisplayed();
+});
