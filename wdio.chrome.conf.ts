@@ -158,7 +158,7 @@ export const config: Options.Testrunner = {
         // <boolean> fail if there are any undefined or pending steps
         strict: false,
         // <string> (expression) only execute the features or scenarios with tags matching the expression
-        tagExpression: '',
+        tagExpression:'',
         // <number> timeout for step definitions
         timeout: 60000,
         // <boolean> Enable this config to treat undefined definitions as warnings.
@@ -178,8 +178,16 @@ export const config: Options.Testrunner = {
      * @param {object} config wdio configuration object
      * @param {Array.<Object>} capabilities list of capabilities details
      */
-    // onPrepare: function (config, capabilities) {
-    // },
+     onPrepare: function (config, capabilities) {
+        beforeEach(function () {
+            // Eğer gerekliyse, bekleyebilirsiniz.
+            browser.waitBeforeScreenshot(1000);
+      
+            // Ekran görüntüsü alınması için komutu çağırın.
+            browser.takeScreenshot();
+          });
+          
+     },
     /**
      * Gets executed before a worker process is spawned and can be used to initialise specific service
      * for that worker as well as modify runtime environments in an async fashion.
@@ -268,9 +276,9 @@ export const config: Options.Testrunner = {
        //   await browser.takeScreenshot();
    // }
        afterStep: async function (step, scenario, { error, duration, passed }, context) {
-        if (error) {
+        
           await browser.takeScreenshot();
-        }
+        
       }
 }
 

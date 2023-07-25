@@ -2,6 +2,7 @@ import type { Options } from '@wdio/types'
 import allure  from 'allure-commandline';
 
 
+
 export const config: Options.Testrunner = {
     //
     // ====================
@@ -160,7 +161,7 @@ export const config: Options.Testrunner = {
         // <boolean> fail if there are any undefined or pending steps
         strict: false,
         // <string> (expression) only execute the features or scenarios with tags matching the expression
-        tagExpression: '',
+        tagExpression:'@smoke',
         // <number> timeout for step definitions
         timeout: 60000,
         // <boolean> Enable this config to treat undefined definitions as warnings.
@@ -219,8 +220,9 @@ export const config: Options.Testrunner = {
      * @param {Array.<String>} specs        List of spec file paths that are to be run
      * @param {object}         browser      instance of created browser/device session
      */
-    // before: function (capabilities, specs) {
-    // },
+     before: function (capabilities, specs) {
+        browser.takeScreenshot();
+    },
     /**
      * Runs before a WebdriverIO command gets executed.
      * @param {string} commandName hook command name
@@ -252,8 +254,9 @@ export const config: Options.Testrunner = {
      * @param {IPickle}            scenario scenario pickle
      * @param {object}             context  Cucumber World object
      */
-    // beforeStep: function (step, scenario, context) {
-    // },
+    //beforeStep: function (step, scenario, context) {
+      //  await browser.takeScreenshot();
+    //},
     /**
      *
      * Runs after a Cucumber Step.
@@ -270,9 +273,9 @@ export const config: Options.Testrunner = {
        //   await browser.takeScreenshot();
    // }
        afterStep: async function (step, scenario, { error, duration, passed }, context) {
-        if (error) {
+        
           await browser.takeScreenshot();
-        }
+        
       }
 }
 

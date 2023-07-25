@@ -10,3 +10,4 @@ Feature: Shopping functionality
         GivenUser is the home page 
         WhenUser add item and remove item 
         Thenitems is removed
+        

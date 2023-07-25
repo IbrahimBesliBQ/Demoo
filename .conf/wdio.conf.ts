@@ -269,7 +269,7 @@ export const config: Options.Testrunner = {
    // }
        afterStep: async function (step, scenario, { error, duration, passed }, context) {
         if (error) {
-          await browser.takeScreenshot();
+            await browser.takeScreenshot();
         }
       }
 }

@@ -1,0 +1,8 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue Jul 25 12:29:46 CEST 2023","Tue Jul 25 12:29:46 CEST 2023","224","","Login functionality: User is login with invalid username and invalid password","","","","When User login with invalid invalid and invalid invalidpass",""
+"passed","Tue Jul 25 12:29:46 CEST 2023","Tue Jul 25 12:29:46 CEST 2023","1","","Login functionality: User is able to login successfully","","","","",""
+"passed","Tue Jul 25 12:29:46 CEST 2023","Tue Jul 25 12:29:46 CEST 2023","180","","Login functionality: User is able to login successfully","","","","Then User is logged in",""
+"passed","Tue Jul 25 12:29:46 CEST 2023","Tue Jul 25 12:29:46 CEST 2023","0","","Login functionality: User is login with invalid username and invalid password","","","","",""
+"passed","Tue Jul 25 12:29:46 CEST 2023","Tue Jul 25 12:29:46 CEST 2023","267","","Login functionality: User is able to login successfully","","","","When User login with problem_user and secret_sauce",""
+"passed","Tue Jul 25 12:29:45 CEST 2023","Tue Jul 25 12:29:46 CEST 2023","814","","Login functionality: User is able to login successfully","","","","When User login with standard_user and secret_sauce",""
+"passed","Tue Jul 25 12:29:46 CEST 2023","Tue Jul 25 12:29:46 CEST 2023","41","","Login functionality: User is login with invalid username and invalid password","","","","Then User is not logged in",""
