@@ -32,10 +32,11 @@
     "wdio": "wdio run ./wdio.conf.ts",
     "lint": "eslint .",
     "prepare": "husky install",
-    "wdio-chrome": "wdio run ./wdio.chrome.conf.ts --spec './features/**/*.feature'",
+    "wdio-chrome": "wdio run ./wdio.chrome.conf.ts",
     "wdio-safari": "wdio run ./wdio.safari.conf.ts --cucumberOpts.tagExpression=@smoke",
     "wdio-firefox": "wdio run ./wdio.firefox.conf.ts",
     "wdio-edge": "wdio run ./wdio.edge.conf.ts",
-    "allure-report": "allure generate allure-results/ --clean && allure open"
+    "allure-report": "allure generate allure-results/ --clean && allure open",
+    "allure-clear": "rm -rf /Users/ibesli/Documents/Project/Demo/allure-results/*"
   }
 }

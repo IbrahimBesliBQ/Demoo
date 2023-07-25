@@ -1,3 +1,4 @@
+@smoke
 Feature: Shopping functionality
 
    Scenario:Shopping:User buy two items go checkout page
@@ -10,4 +11,10 @@ Feature: Shopping functionality
         GivenUser is the home page 
         WhenUser add item and remove item 
         Thenitems is removed
+  
+   Scenario
+   Given User is the home page
+   When User buy two items
+   Then User should see two item in checkout page
+
         
