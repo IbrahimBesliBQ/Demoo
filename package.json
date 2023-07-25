@@ -23,16 +23,19 @@
     "ts-node": "^10.9.1",
     "typescript": "^5.1.6",
     "wdio-chromedriver-service": "^8.1.1",
+    "wdio-edgedriver-service": "^3.0.3",
+    "wdio-geckodriver-service": "^5.0.2",
+    "wdio-safaridriver-service": "^2.1.1",
     "wdio-wait-for": "^3.0.6"
   },
   "scripts": {
     "wdio": "wdio run ./wdio.conf.ts",
     "lint": "eslint .",
     "prepare": "husky install",
-    "wdio-chrome": "wdio run ./wdio.chrome.conf.ts --cucumberOpts.tagExpression=@smoke",
-    "wdio-safari": "wdio run ./wdio.safari.conf.ts --cucumberOpts.tagExpression=@smoke",
-    "wdio-firefox": "wdio run ./wdio.firefox.conf.ts --cucumberOpts.tagExpression=@smoke",
-    "wdio-edge": "wdio run ./wdio.edge.conf.ts --cucumberOpts.tagExpression=@smoke",
+    "wdio-chrome": "wdio run ./wdio.chrome.conf.ts",
+    "wdio-safari": "wdio run ./wdio.safari.conf.ts",
+    "wdio-firefox": "wdio run ./wdio.firefox.conf.ts",
+    "wdio-edge": "wdio run ./wdio.edge.conf.ts",
     "allure-report": "allure generate --clean allure-results allure-report"
   }
 }
