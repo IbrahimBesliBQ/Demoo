@@ -1,3 +1,4 @@
+@smoke
 Feature: Menu functionality
 
     Scenario: Resetapp state function

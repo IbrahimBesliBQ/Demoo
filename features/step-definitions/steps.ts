@@ -8,22 +8,25 @@ import { faker } from '@faker-js/faker';
 
 When(/^User login with (\w+) and (.+)$/, async (username, password) => {
     
-    //await loginPage.login(username, password);
-    await LoginPage.login(username,password);
+   await LoginPage.login(username,password);
 });
 
 Then(/^User is logged in/, async () => {
     await expect(homePage.titleProducts).toBeDisplayed();
 });
+
 When(/^User login with invalid (\w+) and invalid (.+)$/, async (username, password) => {
     await LoginPage.login(username, password);
 });
+
 Then(/^User is not logged in/, async () => {
     await expect(LoginPage.errorText).toBeDisplayed();
 });
+
 Given(/^User is the home page/, async () => {
     await LoginPage.loginWithCr();
 });
+
 When(/^User buy two items/, async () => {
     (await homePage.addButtonItemBackpack).click();
     (await homePage.addButtonItemBikeLight).click();
@@ -39,6 +42,7 @@ When(/^User add item and remove item/, async () => {
     (await homePage.addButtonItemBackpack).click();
     (await homePage.removeButtonItemBackpack).click();
 });
+
 Then(/^items is removed/, async () => {
     (await homePage.removeButtonItemBackpack).isDisplayed()
 
@@ -55,8 +59,9 @@ When(/^User fill in all customer informations fields/, async () => {
    checkoutPage.checkoutProcess(faker.name.firstName(),faker.name.lastName(),faker.address.zipCode());
     (await checkoutPage.continueButton).click();
 });
-Then(/^User should see finish button/, async () => {
-    (await checkoutPage.finishButton).isDisplayed()
+Then(/^User should see finish message/, async () => {
+    (await checkoutPage.finishButton).click();
+    await expect(checkoutPage.checkoutMessage).toBeDisplayed();
 
 });
 Given(/^User is on the home page and add item a card/, async () => {
@@ -73,6 +78,7 @@ Then(/^User can succesfull logout/, async () => {
     (await homePage.logoutButton).click();
      (await LoginPage.loginButton).isDisplayed();
 });
+
 Given(/^Standard_user logged in/, async () => {
     await LoginPage.loginWithCr();
 });
@@ -83,12 +89,18 @@ When(/^User log out from aplication/, async () => {
 
 });
 Then(/^User display loginBttn/, async () => {
-    
-     (await LoginPage.loginButton).isDisplayed();
+    (await LoginPage.loginButton).isDisplayed();
 });
+
 When(/^User add item and reset application/, async () => {
     await homePage.addBackpackItemAndResetApp();
 });
+
 Then(/^Item is not selected/, async () => {
     await expect(homePage.addButtonItemBackpack).toBeDisplayed();
+});
+
+Then(/^User should see two item in checkout page/, async () => {
+   await expect(checkoutPage.cartitem).toBeDisplayed();
+
 });

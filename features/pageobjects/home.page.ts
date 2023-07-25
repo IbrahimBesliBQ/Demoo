@@ -30,6 +30,19 @@ class HomePage {
     public get addButtonItemBikeLight() {
         return $('#add-to-cart-sauce-labs-bike-light')
     }
+    public get addButtonTshirt() {
+        return $('#add-to-cart-sauce-labs-bolt-t-shirt')
+    }
+    public get addButtonJacket() {
+        return $('#add-to-cart-sauce-labs-fleece-jacket')
+    }
+    public get addButtonOnesie() {
+        return $('#add-to-cart-sauce-labs-onesie')
+    }
+    public get addButtonTshirtRed() {
+        return $('#add-to-cart-test.allthethings()-t-shirt-(red)')
+    }
+ 
 
     public get basketIcon() {
         return $('.shopping_cart_link')

@@ -1,3 +1,4 @@
+@smoke
 Feature: log out functionality 
     
     Scenario: user is able to log out from aplication

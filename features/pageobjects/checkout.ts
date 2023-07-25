@@ -39,6 +39,13 @@ class CheckoutPage {
     public get errorMessage(){
         return $('.error-message-container')
     }
+    public get cartitem(){
+        return $('.cart_item')
+    }  
+    public get checkoutMessage(){
+        return $('.complete-header')
+    } 
+
     public async checkoutProcess(firstName: string, lastName: string, postalCode: string){
 (await this.firstName).setValue(firstName);
 (await this.lastName).setValue(lastName);
