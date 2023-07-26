@@ -22,6 +22,9 @@ class LoginPage extends Page {
     public get errorText() {
         return $('.error-message-container');
     }
+    public get errorUsername() {
+        return $('.error');
+    }
 
     private async clickOnLogInButton() {
         await this.loginButton.click();
