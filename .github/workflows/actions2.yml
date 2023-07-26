@@ -1,0 +1,32 @@
+name: Test
+
+on: [push]
+
+jobs:
+  test:
+    name: Test Job
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14.x'  # Değiştirebilirsiniz
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Chrome tests
+        run: npm run wdio-chrome
+
+      - name: Run Safari tests
+        run: npm run wdio-safari
+
+      - name: Run Firefox tests
+        run: npm run wdio-firefox
+
+      - name: Generate Allure report
+        run: npm run allure-report
