@@ -4,11 +4,6 @@ on:
         types:
             -opened
     workflow_dispatch:
-    push:
-        branches:
-         - 'ibrahim'
-         - 'ibrahim.'
-
 jobs:
     deploy:
         runs-on: ubuntu-latest
