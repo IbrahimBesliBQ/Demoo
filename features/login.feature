@@ -20,6 +20,9 @@ Feature: Login functionality
             |username |password | 
             |invalid  |invalidpass  |
             
-
+    Scenario:As a User I can click login button  
+        
+        WhenUser click login button 
+        ThenUser should see error message
 
     
