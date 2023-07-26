@@ -1,7 +1,7 @@
 {
   "name": "my-new-project",
   "type": "module",
-  "devDependencies": {
+  "Dependencies": {
     "@faker-js/faker": "^8.0.2",
     "@typescript-eslint/eslint-plugin": "^6.1.0",
     "@wdio/allure-reporter": "^8.12.3",
@@ -26,7 +26,8 @@
     "wdio-edgedriver-service": "^3.0.3",
     "wdio-geckodriver-service": "^5.0.2",
     "wdio-safaridriver-service": "^2.1.1",
-    "wdio-wait-for": "^3.0.6"
+    "wdio-wait-for": "^3.0.6",
+    "wdio-video-reporter": "^4.0.3"
   },
   "scripts": {
     "wdio": "wdio run ./wdio.conf.ts",
@@ -39,8 +40,5 @@
     "wdio-edge": "wdio run ./wdio.edge.conf.ts",
     "allure-report": "allure generate allure-results --clean && allure open",
     "allure-clear": "rm -rf /Users/ibesli/Documents/Project/Demo/allure-results/*"
-  },
-  "dependencies": {
-    "wdio-video-reporter": "^4.0.3"
   }
 }
