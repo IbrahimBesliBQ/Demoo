@@ -2,7 +2,7 @@ name: GitHub Actions After Push Into Develop Branch
 on:
   push:
     branches:
-      - develop
+      - ibrahim
 jobs:
   e2e-tests:
     runs-on: ubuntu-latest
@@ -13,21 +13,15 @@ jobs:
           browser: chrome
           version: 1036826
       - run: chrome --version
-
-      - run: sudo apt-get remove google-chrome-stable
-
       - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          ref: develop
-
+        uses: actions/checkout@v3
       - name: Install node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
            node-version: '18'
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Test
-        run: npx wdio run test/wdio.conf.ts
+        run: npm run wdio-chrome 
