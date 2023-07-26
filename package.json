@@ -1,7 +1,7 @@
 {
   "name": "my-new-project",
   "type": "module",
-  "Dependencies": {
+  "devDependencies": {
     "@faker-js/faker": "^8.0.2",
     "@typescript-eslint/eslint-plugin": "^6.1.0",
     "@wdio/allure-reporter": "^8.12.3",
