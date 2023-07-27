@@ -6,5 +6,4 @@ export default class Page {
    
     public open () {
         return browser.url(`https://www.saucedemo.com/`)
-    }
-}
+    }}

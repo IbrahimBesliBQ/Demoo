@@ -12,9 +12,9 @@ jobs:
         - name: Install
           run: npm install
         - name: Test
-          run: npm run wdio
+          run: npm run wdio-chrome
           continue-on-error: true
         - uses: actions/upload-artifact@v3
           with:
             name: allureReport
-            path: ./reports/allure/allure-report
+            path: ./allure-report
