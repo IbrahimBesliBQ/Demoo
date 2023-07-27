@@ -1,57 +1,57 @@
-2023-07-27T21:04:32.179Z DEBUG @wdio/utils:initialiseServices: initialise service "selenium-standalone" as NPM package
-2023-07-27T21:04:32.211Z INFO @wdio/cli:launcher: Run onPrepare hook
-2023-07-27T21:04:36.430Z DEBUG @wdio/cli:utils: Finished to run "onPrepare" hook in 4218ms
-2023-07-27T21:04:36.433Z INFO @wdio/cli:launcher: Run onWorkerStart hook
-2023-07-27T21:04:36.433Z INFO @wdio/cli:launcher: Run onWorkerStart hook
-2023-07-27T21:04:36.433Z INFO @wdio/cli:launcher: Run onWorkerStart hook
-2023-07-27T21:04:36.433Z INFO @wdio/cli:launcher: Run onWorkerStart hook
-2023-07-27T21:04:36.433Z INFO @wdio/cli:launcher: Run onWorkerStart hook
-2023-07-27T21:04:36.433Z INFO @wdio/cli:launcher: Run onWorkerStart hook
-2023-07-27T21:04:36.433Z INFO @wdio/cli:launcher: Run onWorkerStart hook
-2023-07-27T21:04:36.433Z DEBUG @wdio/cli:utils: Finished to run "onWorkerStart" hook in 0ms
-2023-07-27T21:04:36.433Z DEBUG @wdio/cli:utils: Finished to run "onWorkerStart" hook in 0ms
-2023-07-27T21:04:36.433Z DEBUG @wdio/cli:utils: Finished to run "onWorkerStart" hook in 0ms
-2023-07-27T21:04:36.433Z DEBUG @wdio/cli:utils: Finished to run "onWorkerStart" hook in 0ms
-2023-07-27T21:04:36.433Z DEBUG @wdio/cli:utils: Finished to run "onWorkerStart" hook in 0ms
-2023-07-27T21:04:36.433Z DEBUG @wdio/cli:utils: Finished to run "onWorkerStart" hook in 0ms
-2023-07-27T21:04:36.433Z DEBUG @wdio/cli:utils: Finished to run "onWorkerStart" hook in 0ms
-2023-07-27T21:04:36.433Z INFO @wdio/local-runner: Start worker 0-0 with arg: run,./wdio.chrome.conf.ts
-2023-07-27T21:04:36.435Z DEBUG @wdio/local-runner: Send command run to worker with cid "0-0"
-2023-07-27T21:04:36.435Z INFO @wdio/local-runner: Start worker 0-1 with arg: run,./wdio.chrome.conf.ts
-2023-07-27T21:04:36.435Z DEBUG @wdio/local-runner: Send command run to worker with cid "0-1"
-2023-07-27T21:04:36.435Z INFO @wdio/local-runner: Start worker 0-2 with arg: run,./wdio.chrome.conf.ts
-2023-07-27T21:04:36.435Z DEBUG @wdio/local-runner: Send command run to worker with cid "0-2"
-2023-07-27T21:04:36.436Z INFO @wdio/local-runner: Start worker 0-3 with arg: run,./wdio.chrome.conf.ts
-2023-07-27T21:04:36.436Z DEBUG @wdio/local-runner: Send command run to worker with cid "0-3"
-2023-07-27T21:04:36.436Z INFO @wdio/local-runner: Start worker 0-4 with arg: run,./wdio.chrome.conf.ts
-2023-07-27T21:04:36.436Z DEBUG @wdio/local-runner: Send command run to worker with cid "0-4"
-2023-07-27T21:04:36.436Z INFO @wdio/local-runner: Start worker 0-5 with arg: run,./wdio.chrome.conf.ts
-2023-07-27T21:04:36.438Z DEBUG @wdio/local-runner: Send command run to worker with cid "0-5"
-2023-07-27T21:04:36.439Z INFO @wdio/local-runner: Start worker 0-6 with arg: run,./wdio.chrome.conf.ts
-2023-07-27T21:04:36.446Z DEBUG @wdio/local-runner: Send command run to worker with cid "0-6"
-2023-07-27T21:04:54.496Z DEBUG @wdio/local-runner: Runner 0-2 finished with exit code 0
-2023-07-27T21:04:54.497Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
-2023-07-27T21:04:54.497Z DEBUG @wdio/cli:utils: Finished to run "onWorkerEnd" hook in 0ms
-2023-07-27T21:04:54.525Z DEBUG @wdio/local-runner: Runner 0-4 finished with exit code 0
-2023-07-27T21:04:54.526Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
-2023-07-27T21:04:54.526Z DEBUG @wdio/cli:utils: Finished to run "onWorkerEnd" hook in 0ms
-2023-07-27T21:04:54.538Z DEBUG @wdio/local-runner: Runner 0-0 finished with exit code 0
-2023-07-27T21:04:54.539Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
-2023-07-27T21:04:54.539Z DEBUG @wdio/cli:utils: Finished to run "onWorkerEnd" hook in 0ms
-2023-07-27T21:04:54.636Z DEBUG @wdio/local-runner: Runner 0-5 finished with exit code 0
-2023-07-27T21:04:54.636Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
-2023-07-27T21:04:54.637Z DEBUG @wdio/cli:utils: Finished to run "onWorkerEnd" hook in 0ms
-2023-07-27T21:04:54.641Z DEBUG @wdio/local-runner: Runner 0-1 finished with exit code 0
-2023-07-27T21:04:54.641Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
-2023-07-27T21:04:54.641Z DEBUG @wdio/cli:utils: Finished to run "onWorkerEnd" hook in 0ms
-2023-07-27T21:04:54.643Z DEBUG @wdio/local-runner: Runner 0-6 finished with exit code 0
-2023-07-27T21:04:54.644Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
-2023-07-27T21:04:54.644Z DEBUG @wdio/cli:utils: Finished to run "onWorkerEnd" hook in 0ms
-2023-07-27T21:04:54.644Z DEBUG @wdio/local-runner: Runner 0-3 finished with exit code 0
-2023-07-27T21:04:54.644Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
-2023-07-27T21:04:54.645Z DEBUG @wdio/cli:utils: Finished to run "onWorkerEnd" hook in 0ms
-2023-07-27T21:04:54.645Z INFO @wdio/cli:launcher: Run onComplete hook
-2023-07-27T21:04:54.645Z INFO @wdio/selenium-standalone-service: shutting down all browsers
-2023-07-27T21:04:54.645Z DEBUG @wdio/cli:utils: Finished to run "onComplete" hook in 0ms
-2023-07-27T21:04:54.667Z INFO @wdio/local-runner: Shutting down spawned worker
-2023-07-27T21:04:54.918Z INFO @wdio/local-runner: Waiting for 0 to shut down gracefully
+2023-07-27T23:10:34.194Z DEBUG @wdio/utils:initialiseServices: initialise service "selenium-standalone" as NPM package
+2023-07-27T23:10:34.223Z INFO @wdio/cli:launcher: Run onPrepare hook
+2023-07-27T23:10:36.769Z DEBUG @wdio/cli:utils: Finished to run "onPrepare" hook in 2546ms
+2023-07-27T23:10:36.770Z INFO @wdio/cli:launcher: Run onWorkerStart hook
+2023-07-27T23:10:36.770Z INFO @wdio/cli:launcher: Run onWorkerStart hook
+2023-07-27T23:10:36.770Z INFO @wdio/cli:launcher: Run onWorkerStart hook
+2023-07-27T23:10:36.770Z INFO @wdio/cli:launcher: Run onWorkerStart hook
+2023-07-27T23:10:36.770Z INFO @wdio/cli:launcher: Run onWorkerStart hook
+2023-07-27T23:10:36.770Z INFO @wdio/cli:launcher: Run onWorkerStart hook
+2023-07-27T23:10:36.770Z INFO @wdio/cli:launcher: Run onWorkerStart hook
+2023-07-27T23:10:36.770Z DEBUG @wdio/cli:utils: Finished to run "onWorkerStart" hook in 0ms
+2023-07-27T23:10:36.770Z DEBUG @wdio/cli:utils: Finished to run "onWorkerStart" hook in 0ms
+2023-07-27T23:10:36.770Z DEBUG @wdio/cli:utils: Finished to run "onWorkerStart" hook in 0ms
+2023-07-27T23:10:36.770Z DEBUG @wdio/cli:utils: Finished to run "onWorkerStart" hook in 0ms
+2023-07-27T23:10:36.770Z DEBUG @wdio/cli:utils: Finished to run "onWorkerStart" hook in 0ms
+2023-07-27T23:10:36.770Z DEBUG @wdio/cli:utils: Finished to run "onWorkerStart" hook in 0ms
+2023-07-27T23:10:36.770Z DEBUG @wdio/cli:utils: Finished to run "onWorkerStart" hook in 0ms
+2023-07-27T23:10:36.771Z INFO @wdio/local-runner: Start worker 0-0 with arg: run,./wdio.chrome.conf.ts
+2023-07-27T23:10:36.772Z DEBUG @wdio/local-runner: Send command run to worker with cid "0-0"
+2023-07-27T23:10:36.772Z INFO @wdio/local-runner: Start worker 0-1 with arg: run,./wdio.chrome.conf.ts
+2023-07-27T23:10:36.772Z DEBUG @wdio/local-runner: Send command run to worker with cid "0-1"
+2023-07-27T23:10:36.772Z INFO @wdio/local-runner: Start worker 0-2 with arg: run,./wdio.chrome.conf.ts
+2023-07-27T23:10:36.773Z DEBUG @wdio/local-runner: Send command run to worker with cid "0-2"
+2023-07-27T23:10:36.773Z INFO @wdio/local-runner: Start worker 0-3 with arg: run,./wdio.chrome.conf.ts
+2023-07-27T23:10:36.773Z DEBUG @wdio/local-runner: Send command run to worker with cid "0-3"
+2023-07-27T23:10:36.773Z INFO @wdio/local-runner: Start worker 0-4 with arg: run,./wdio.chrome.conf.ts
+2023-07-27T23:10:36.774Z DEBUG @wdio/local-runner: Send command run to worker with cid "0-4"
+2023-07-27T23:10:36.774Z INFO @wdio/local-runner: Start worker 0-5 with arg: run,./wdio.chrome.conf.ts
+2023-07-27T23:10:36.775Z DEBUG @wdio/local-runner: Send command run to worker with cid "0-5"
+2023-07-27T23:10:36.775Z INFO @wdio/local-runner: Start worker 0-6 with arg: run,./wdio.chrome.conf.ts
+2023-07-27T23:10:36.778Z DEBUG @wdio/local-runner: Send command run to worker with cid "0-6"
+2023-07-27T23:10:38.190Z DEBUG @wdio/local-runner: Runner 0-0 finished with exit code 1
+2023-07-27T23:10:38.191Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
+2023-07-27T23:10:38.191Z DEBUG @wdio/cli:utils: Finished to run "onWorkerEnd" hook in 0ms
+2023-07-27T23:10:38.197Z DEBUG @wdio/local-runner: Runner 0-2 finished with exit code 1
+2023-07-27T23:10:38.197Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
+2023-07-27T23:10:38.197Z DEBUG @wdio/cli:utils: Finished to run "onWorkerEnd" hook in 0ms
+2023-07-27T23:10:38.269Z DEBUG @wdio/local-runner: Runner 0-6 finished with exit code 1
+2023-07-27T23:10:38.269Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
+2023-07-27T23:10:38.270Z DEBUG @wdio/cli:utils: Finished to run "onWorkerEnd" hook in 1ms
+2023-07-27T23:10:38.276Z DEBUG @wdio/local-runner: Runner 0-3 finished with exit code 1
+2023-07-27T23:10:38.276Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
+2023-07-27T23:10:38.276Z DEBUG @wdio/cli:utils: Finished to run "onWorkerEnd" hook in 0ms
+2023-07-27T23:10:38.287Z DEBUG @wdio/local-runner: Runner 0-5 finished with exit code 1
+2023-07-27T23:10:38.287Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
+2023-07-27T23:10:38.287Z DEBUG @wdio/cli:utils: Finished to run "onWorkerEnd" hook in 0ms
+2023-07-27T23:10:38.297Z DEBUG @wdio/local-runner: Runner 0-1 finished with exit code 1
+2023-07-27T23:10:38.298Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
+2023-07-27T23:10:38.298Z DEBUG @wdio/cli:utils: Finished to run "onWorkerEnd" hook in 0ms
+2023-07-27T23:10:38.338Z DEBUG @wdio/local-runner: Runner 0-4 finished with exit code 1
+2023-07-27T23:10:38.339Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
+2023-07-27T23:10:38.339Z DEBUG @wdio/cli:utils: Finished to run "onWorkerEnd" hook in 0ms
+2023-07-27T23:10:38.339Z INFO @wdio/cli:launcher: Run onComplete hook
+2023-07-27T23:10:38.339Z INFO @wdio/selenium-standalone-service: shutting down all browsers
+2023-07-27T23:10:38.339Z DEBUG @wdio/cli:utils: Finished to run "onComplete" hook in 0ms
+2023-07-27T23:10:38.361Z INFO @wdio/local-runner: Shutting down spawned worker
+2023-07-27T23:10:38.612Z INFO @wdio/local-runner: Waiting for 0 to shut down gracefully

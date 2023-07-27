@@ -1,28 +1,4 @@
-2023-07-27T21:04:37.711Z INFO @wdio/local-runner: Run worker command: run
-2023-07-27T21:04:37.812Z DEBUG @wdio/runner: init remote session
-2023-07-27T21:04:37.816Z DEBUG @wdio/utils:initialiseServices: initialise service "selenium-standalone" as NPM package
-2023-07-27T21:04:38.171Z DEBUG @wdio/runner: init remote session
-2023-07-27T21:04:38.181Z INFO webdriver: Initiate new session using the WebDriver protocol
-2023-07-27T21:04:38.306Z INFO webdriver: [POST] http://localhost:4444/wd/hub/session
-2023-07-27T21:04:38.306Z INFO webdriver: DATA {
-  capabilities: {
-    alwaysMatch: { browserName: 'chrome', 'wdio:devtoolsOptions': [Object] },
-    firstMatch: [ {} ]
-  },
-  desiredCapabilities: { browserName: 'chrome', 'wdio:devtoolsOptions': { headless: true } }
-}
-2023-07-27T21:04:54.334Z INFO webdriver: COMMAND getLogTypes()
-2023-07-27T21:04:54.356Z INFO webdriver: [GET] http://localhost:4444/wd/hub/session/9d0088a85418a638926d2e33cad29391/se/log/types
-2023-07-27T21:04:54.381Z INFO webdriver: RESULT [ 'browser', 'driver' ]
-2023-07-27T21:04:54.381Z DEBUG @wdio/runner: Fetching logs for browser, driver
-2023-07-27T21:04:54.381Z INFO webdriver: COMMAND getLogs("driver")
-2023-07-27T21:04:54.381Z INFO webdriver: COMMAND getLogs("browser")
-2023-07-27T21:04:54.383Z INFO webdriver: [POST] http://localhost:4444/wd/hub/session/9d0088a85418a638926d2e33cad29391/se/log
-2023-07-27T21:04:54.383Z INFO webdriver: DATA { type: 'driver' }
-2023-07-27T21:04:54.383Z INFO webdriver: [POST] http://localhost:4444/wd/hub/session/9d0088a85418a638926d2e33cad29391/se/log
-2023-07-27T21:04:54.383Z INFO webdriver: DATA { type: 'browser' }
-2023-07-27T21:04:54.401Z INFO webdriver: RESULT []
-2023-07-27T21:04:54.403Z INFO webdriver: RESULT []
-2023-07-27T21:04:54.403Z INFO webdriver: COMMAND deleteSession()
-2023-07-27T21:04:54.403Z INFO webdriver: [DELETE] http://localhost:4444/wd/hub/session/9d0088a85418a638926d2e33cad29391
-2023-07-27T21:04:54.530Z INFO webdriver: RESULT null
+2023-07-27T23:10:37.981Z INFO @wdio/local-runner: Run worker command: run
+2023-07-27T23:10:38.052Z DEBUG @wdio/runner: init remote session
+2023-07-27T23:10:38.056Z DEBUG @wdio/utils:initialiseServices: initialise service "selenium-standalone" as NPM package
+2023-07-27T23:10:38.253Z ERROR @wdio/local-runner: Failed launching test session: Error: ENOENT: no such file or directory, open 'file:///Users/ibesli/Documents/Project/Demo/test/features/shopping.feature'
