@@ -5,7 +5,7 @@ on:
     types: [opened, assigned, reopened, synchronize]
   issues:
     types: [opened]
-
+  workflow_dispatch:
 jobs:
   checkout-action:
     runs-on: ubuntu-latest
