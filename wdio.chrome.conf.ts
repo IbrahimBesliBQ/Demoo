@@ -2,7 +2,11 @@ import { Options } from '@wdio/types'
 import allure  from 'allure-commandline';
 import url from 'node:url'
 import path from 'node:path'
-
+const drivers = {
+    chrome: { version: '114.0.5735.16' }, // https://chromedriver.chromium.org/
+    firefox: { version: '0.33.0' }, // https://github.com/mozilla/geckodriver/releases
+    chromiumedge: { version: '115.0.1901.188' } // https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/
+}
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url))
 let baseUrl = "https://www.saucedemo.com/";
 //let env = process.env.Env
@@ -128,7 +132,9 @@ export const config: Options.Testrunner = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: ['chromedriver'],
+    services: [
+        ['selenium-standalone', { drivers: { firefox: '0.33.0', chrome: true, chromiumedge: 'latest' } }]
+    ],
 
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
