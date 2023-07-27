@@ -1,28 +1,28 @@
-2023-07-27T19:54:19.429Z INFO @wdio/local-runner: Run worker command: run
-2023-07-27T19:54:19.520Z DEBUG @wdio/runner: init remote session
-2023-07-27T19:54:19.525Z DEBUG @wdio/utils:initialiseServices: initialise service "selenium-standalone" as NPM package
-2023-07-27T19:54:19.835Z DEBUG @wdio/runner: init remote session
-2023-07-27T19:54:19.847Z INFO webdriver: Initiate new session using the WebDriver protocol
-2023-07-27T19:54:19.941Z INFO webdriver: [POST] http://localhost:4444/wd/hub/session
-2023-07-27T19:54:19.941Z INFO webdriver: DATA {
+2023-07-27T21:04:37.713Z INFO @wdio/local-runner: Run worker command: run
+2023-07-27T21:04:37.790Z DEBUG @wdio/runner: init remote session
+2023-07-27T21:04:37.801Z DEBUG @wdio/utils:initialiseServices: initialise service "selenium-standalone" as NPM package
+2023-07-27T21:04:38.260Z DEBUG @wdio/runner: init remote session
+2023-07-27T21:04:38.261Z INFO webdriver: Initiate new session using the WebDriver protocol
+2023-07-27T21:04:38.357Z INFO webdriver: [POST] http://localhost:4444/wd/hub/session
+2023-07-27T21:04:38.357Z INFO webdriver: DATA {
   capabilities: {
     alwaysMatch: { browserName: 'chrome', 'wdio:devtoolsOptions': [Object] },
     firstMatch: [ {} ]
   },
   desiredCapabilities: { browserName: 'chrome', 'wdio:devtoolsOptions': { headless: true } }
 }
-2023-07-27T19:54:35.747Z INFO webdriver: COMMAND getLogTypes()
-2023-07-27T19:54:35.770Z INFO webdriver: [GET] http://localhost:4444/wd/hub/session/228bb4d9e420056584dc8b2d8902c4ae/se/log/types
-2023-07-27T19:54:35.859Z INFO webdriver: RESULT [ 'browser', 'driver' ]
-2023-07-27T19:54:35.859Z DEBUG @wdio/runner: Fetching logs for browser, driver
-2023-07-27T19:54:35.859Z INFO webdriver: COMMAND getLogs("driver")
-2023-07-27T19:54:35.859Z INFO webdriver: COMMAND getLogs("browser")
-2023-07-27T19:54:35.865Z INFO webdriver: [POST] http://localhost:4444/wd/hub/session/228bb4d9e420056584dc8b2d8902c4ae/se/log
-2023-07-27T19:54:35.865Z INFO webdriver: DATA { type: 'driver' }
-2023-07-27T19:54:35.865Z INFO webdriver: [POST] http://localhost:4444/wd/hub/session/228bb4d9e420056584dc8b2d8902c4ae/se/log
-2023-07-27T19:54:35.865Z INFO webdriver: DATA { type: 'browser' }
-2023-07-27T19:54:35.896Z INFO webdriver: RESULT []
-2023-07-27T19:54:35.903Z INFO webdriver: RESULT []
-2023-07-27T19:54:35.904Z INFO webdriver: COMMAND deleteSession()
-2023-07-27T19:54:35.909Z INFO webdriver: [DELETE] http://localhost:4444/wd/hub/session/228bb4d9e420056584dc8b2d8902c4ae
-2023-07-27T19:54:36.054Z INFO webdriver: RESULT null
+2023-07-27T21:04:54.334Z INFO webdriver: COMMAND getLogTypes()
+2023-07-27T21:04:54.356Z INFO webdriver: [GET] http://localhost:4444/wd/hub/session/4db3cecb503bae4361594b4c1d026956/se/log/types
+2023-07-27T21:04:54.377Z INFO webdriver: RESULT [ 'browser', 'driver' ]
+2023-07-27T21:04:54.378Z DEBUG @wdio/runner: Fetching logs for browser, driver
+2023-07-27T21:04:54.378Z INFO webdriver: COMMAND getLogs("driver")
+2023-07-27T21:04:54.378Z INFO webdriver: COMMAND getLogs("browser")
+2023-07-27T21:04:54.383Z INFO webdriver: [POST] http://localhost:4444/wd/hub/session/4db3cecb503bae4361594b4c1d026956/se/log
+2023-07-27T21:04:54.383Z INFO webdriver: DATA { type: 'driver' }
+2023-07-27T21:04:54.383Z INFO webdriver: [POST] http://localhost:4444/wd/hub/session/4db3cecb503bae4361594b4c1d026956/se/log
+2023-07-27T21:04:54.383Z INFO webdriver: DATA { type: 'browser' }
+2023-07-27T21:04:54.402Z INFO webdriver: RESULT []
+2023-07-27T21:04:54.428Z INFO webdriver: RESULT []
+2023-07-27T21:04:54.428Z INFO webdriver: COMMAND deleteSession()
+2023-07-27T21:04:54.428Z INFO webdriver: [DELETE] http://localhost:4444/wd/hub/session/4db3cecb503bae4361594b4c1d026956
+2023-07-27T21:04:54.531Z INFO webdriver: RESULT null
