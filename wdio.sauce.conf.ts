@@ -1,4 +1,4 @@
-import { config as sharedConfig } from './wdio.shared.conf.js'
+import { config as sharedConfig } from './wdio.chrome.conf.js'
 
 export const config: WebdriverIO.Config = {
     ...sharedConfig,
@@ -11,7 +11,7 @@ export const config: WebdriverIO.Config = {
             maxInstances: 5,
             browserName: 'firefox',
             browserVersion: 'latest',
-            platformName: 'Windows 10',
+            platformName: 'macOS 10.13',
             'sauce:options': {
                 build: `Build ${Math.ceil(Date.now() / 1000)}`
             }

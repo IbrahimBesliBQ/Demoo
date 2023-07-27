@@ -1,0 +1,28 @@
+2023-07-27T19:36:51.432Z INFO @wdio/local-runner: Run worker command: run
+2023-07-27T19:36:51.500Z DEBUG @wdio/runner: init remote session
+2023-07-27T19:36:51.505Z DEBUG @wdio/utils:initialiseServices: initialise service "chromedriver" as NPM package
+2023-07-27T19:36:51.787Z DEBUG @wdio/runner: init remote session
+2023-07-27T19:36:51.791Z INFO webdriver: Initiate new session using the WebDriver protocol
+2023-07-27T19:36:51.888Z INFO webdriver: [POST] http://localhost:9515/session
+2023-07-27T19:36:51.888Z INFO webdriver: DATA {
+  capabilities: {
+    alwaysMatch: { browserName: 'chrome', 'wdio:devtoolsOptions': [Object] },
+    firstMatch: [ {} ]
+  },
+  desiredCapabilities: { browserName: 'chrome', 'wdio:devtoolsOptions': { headless: true } }
+}
+2023-07-27T19:36:54.841Z INFO webdriver: COMMAND getLogTypes()
+2023-07-27T19:36:54.903Z INFO webdriver: [GET] http://localhost:9515/session/a19a2002ba8994300792a08787f68515/se/log/types
+2023-07-27T19:36:54.942Z INFO webdriver: RESULT [ 'browser', 'driver' ]
+2023-07-27T19:36:54.943Z DEBUG @wdio/runner: Fetching logs for browser, driver
+2023-07-27T19:36:54.944Z INFO webdriver: COMMAND getLogs("driver")
+2023-07-27T19:36:54.945Z INFO webdriver: COMMAND getLogs("browser")
+2023-07-27T19:36:54.945Z INFO webdriver: [POST] http://localhost:9515/session/a19a2002ba8994300792a08787f68515/se/log
+2023-07-27T19:36:54.945Z INFO webdriver: DATA { type: 'driver' }
+2023-07-27T19:36:54.947Z INFO webdriver: [POST] http://localhost:9515/session/a19a2002ba8994300792a08787f68515/se/log
+2023-07-27T19:36:54.947Z INFO webdriver: DATA { type: 'browser' }
+2023-07-27T19:36:54.949Z INFO webdriver: RESULT []
+2023-07-27T19:36:54.958Z INFO webdriver: RESULT []
+2023-07-27T19:36:54.958Z INFO webdriver: COMMAND deleteSession()
+2023-07-27T19:36:54.967Z INFO webdriver: [DELETE] http://localhost:9515/session/a19a2002ba8994300792a08787f68515
+2023-07-27T19:36:55.023Z INFO webdriver: RESULT null

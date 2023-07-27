@@ -1,6 +1,9 @@
 import { Options } from '@wdio/types'
 import allure  from 'allure-commandline';
+import url from 'node:url'
+import path from 'node:path'
 
+const __dirname = url.fileURLToPath(new URL('.', import.meta.url))
 let baseUrl = "https://www.saucedemo.com/";
 //let env = process.env.Env
 //let urls = {
@@ -11,6 +14,7 @@ let baseUrl = "https://www.saucedemo.com/";
 //baseUrl = urls[env]
 
 export const config: Options.Testrunner = {
+   
     //
     // ====================
     // Runner Configuration
@@ -82,7 +86,8 @@ export const config: Options.Testrunner = {
     // Define all options that are relevant for the WebdriverIO instance here
     //
     // Level of logging verbosity: trace | debug | info | warn | error | silent
-    logLevel: 'info',
+    logLevel: 'trace',
+    outputDir: path.resolve(__dirname, 'logs'),
     //
     // Set specific log levels per logger
     // loggers:
@@ -145,8 +150,7 @@ export const config: Options.Testrunner = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec',['allure', {outputDir: 'allure-results',disableWebdriverStepsReporting: true,
-    disableWebdriverScreenshotsReporting: true,}]],
+    reporters: ['spec'],
 
     //
     // If you are using Cucumber you need to specify the location of your step definitions.
