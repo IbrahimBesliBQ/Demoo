@@ -35,7 +35,7 @@ export const config: Options.Testrunner = {
     // will be called from there.
     //
     specs: [
-        './features/*.feature'
+        './test/features/*.feature'
     ],
     // Patterns to exclude.
     exclude: [
@@ -74,7 +74,7 @@ export const config: Options.Testrunner = {
     // Define all options that are relevant for the WebdriverIO instance here
     //
     // Level of logging verbosity: trace | debug | info | warn | error | silent
-    logLevel:'debug',
+    logLevel:'info',
     //
     // Set specific log levels per logger
     // loggers:
@@ -138,14 +138,14 @@ export const config: Options.Testrunner = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: [['allure', {outputDir: './allure-results',disableWebdriverStepsReporting: true,
+    reporters: ['spec',['allure', {outputDir: './allure-report',disableWebdriverStepsReporting: true,
     disableWebdriverScreenshotsReporting: false,}]],
 
     //
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
         // <string[]> (file/dir) require files before executing features
-        require: ['./features/step-definitions/steps.ts'],
+        require: ['./test/step-definitions/steps.ts'],
         // <boolean> show full backtrace for errors
         backtrace: false,
         // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
@@ -161,7 +161,7 @@ export const config: Options.Testrunner = {
         // <boolean> fail if there are any undefined or pending steps
         strict: false,
         // <string> (expression) only execute the features or scenarios with tags matching the expression
-        tagExpression:'@smoke',
+        tagExpression:'@login',
         // <number> timeout for step definitions
         timeout: 60000,
         // <boolean> Enable this config to treat undefined definitions as warnings.

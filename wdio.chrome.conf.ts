@@ -33,9 +33,7 @@ export const config: Options.Testrunner = {
     // then the current working directory is where your `package.json` resides, so `wdio`
     // will be called from there.
     //
-    specs: [
-        './features/**/*.feature'
-    ],
+    specs: ['./test/features/*.feature'],
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
@@ -64,11 +62,9 @@ export const config: Options.Testrunner = {
     //
     capabilities: [{
         browserName: 'chrome',
-        acceptInsecureCerts: true,
-        'goog:chromeOptions' :{
-            args:['--headless','--disable-gpu','--disable-dev-shm-usage']
-        }
-
+        'wdio:devtoolsOptions': {
+            headless: true
+        },
     }],
 
     //
@@ -118,7 +114,7 @@ export const config: Options.Testrunner = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: ['selenium-standalone', ]
+    services: ['chromedriver'],
 
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
@@ -140,14 +136,14 @@ export const config: Options.Testrunner = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: [['allure', {outputDir: './allure-results',disableWebdriverStepsReporting: true,
+    reporters: ['spec',['allure', {outputDir: './allure-report',disableWebdriverStepsReporting: true,
     disableWebdriverScreenshotsReporting: false,}]],
 
     //
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
         // <string[]> (file/dir) require files before executing features
-        require: ['./features/step-definitions/steps.ts'],
+        require: ['./test/step-definitions/steps.ts'],
         // <boolean> show full backtrace for errors
         backtrace: false,
         // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
@@ -280,12 +276,14 @@ export const config: Options.Testrunner = {
       //  if (error) {
        //   await browser.takeScreenshot();
    // }
-       afterStep: async function (step, scenario, { error, duration, passed }, context) {
-        
-          await browser.takeScreenshot();
-        
-      }
-}
+      // ...
+
+  afterStep: async function (step, scenario, { error, duration, passed }, context) {
+    await browser.takeScreenshot();
+  },
+
+// ...
+
 
     /**
      *
@@ -352,3 +350,4 @@ export const config: Options.Testrunner = {
     */
     // onReload: function(oldSessionId, newSessionId) {
     // }
+}

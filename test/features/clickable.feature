@@ -6,3 +6,4 @@ Feature: Login Btn is Clickable
     GivenUser is the home page 
     WhenUser click all item add button 
     ThenUser should see items in cart
+    
