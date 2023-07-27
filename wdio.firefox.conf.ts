@@ -1,6 +1,6 @@
 import type { Options } from '@wdio/types'
 import allure  from 'allure-commandline';
-
+let baseUrl = "https://www.saucedemo.com/";
 
 export const config: Options.Testrunner = {
     //
@@ -97,7 +97,7 @@ export const config: Options.Testrunner = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'http://localhost',
+    baseUrl: baseUrl,
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,

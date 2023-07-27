@@ -1,6 +1,14 @@
 import { Options } from '@wdio/types'
 import allure  from 'allure-commandline';
 
+let baseUrl = "https://www.saucedemo.com/";
+//let env = process.env.Env
+//let urls = {
+  //  qa: "https://www.saucedemo.com/",
+    //dev: "https://www.saucedemo.com/",
+    //prod: "https://www.saucedemo.com/",
+//}
+//baseUrl = urls[env]
 
 export const config: Options.Testrunner = {
     //
@@ -98,7 +106,8 @@ export const config: Options.Testrunner = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'http://localhost',
+    //baseUrl: 'http://localhost',
+    baseUrl: baseUrl,
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -136,8 +145,8 @@ export const config: Options.Testrunner = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec',['allure', {outputDir: './allure-report',disableWebdriverStepsReporting: true,
-    disableWebdriverScreenshotsReporting: false,}]],
+    reporters: ['spec',['allure', {outputDir: 'allure-results',disableWebdriverStepsReporting: true,
+    disableWebdriverScreenshotsReporting: true,}]],
 
     //
     // If you are using Cucumber you need to specify the location of your step definitions.
