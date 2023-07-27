@@ -63,7 +63,12 @@ export const config: Options.Testrunner = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{
-        browserName: 'chrome'
+        browserName: 'chrome',
+        acceptInsecureCerts: true,
+        'goog:chromeOptions' :{
+            args:['--headless','--disable-gpu','--disable-dev-shm-usage']
+        }
+
     }],
 
     //
@@ -113,7 +118,7 @@ export const config: Options.Testrunner = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: ['chromedriver'],
+    services: ['selenium-standalone', ]
 
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
@@ -178,16 +183,16 @@ export const config: Options.Testrunner = {
      * @param {object} config wdio configuration object
      * @param {Array.<Object>} capabilities list of capabilities details
      */
-     onPrepare: function (config, capabilities) {
-        beforeEach(function () {
+    // onPrepare: function (config, capabilities) {
+      //  beforeEach(function () {
             // Eğer gerekliyse, bekleyebilirsiniz.
-            browser.waitBeforeScreenshot(1000);
+          //  browser.waitBeforeScreenshot(1000);
       
             // Ekran görüntüsü alınması için komutu çağırın.
-            browser.takeScreenshot();
-          });
+         //   browser.takeScreenshot();
+         // });
           
-     },
+     //},
     /**
      * Gets executed before a worker process is spawned and can be used to initialise specific service
      * for that worker as well as modify runtime environments in an async fashion.
