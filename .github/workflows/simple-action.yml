@@ -1,5 +1,5 @@
 name: Simple Action
-on: [push,workflow_dispatch]
+on: [pull_request,workflow_dispatch]
 
 jobs:
   simple-action:

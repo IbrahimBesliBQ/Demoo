@@ -1,5 +1,5 @@
 name: Workflow Commands
-on: [push,workflow_dispatch]
+on: [pull_request,workflow_dispatch]
 defaults:
   run:
     shell: bash

@@ -5,8 +5,7 @@
     "@faker-js/faker": "^8.0.2",
     "@typescript-eslint/eslint-plugin": "^6.1.0",
     "@wdio/allure-reporter": "^8.12.3",
-    "@wdio/cli": "^8.13.12",
-    "@wdio/cucumber-framework": "^8.13.9",
+    "@wdio/cucumber-framework": "^7.18.0",
     "@wdio/dot-reporter": "^8.12.2",
     "@wdio/local-runner": "^8.13.4",
     "@wdio/selenium-standalone-service": "^8.12.1",
@@ -42,5 +41,8 @@
     "wdio-edge": "wdio run ./wdio.edge.conf.ts",
     "allure-report": "allure generate allure-results --clean && allure open",
     "allure-clear": "rm -rf /Users/ibesli/Documents/Project/Demo/allure-results/*"
+  },
+  "dependencies": {
+    "@wdio/cli": "^8.13.12"
   }
 }

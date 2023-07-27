@@ -2,7 +2,6 @@ import type { Options } from '@wdio/types'
 import allure  from 'allure-commandline';
 
 
-
 export const config: Options.Testrunner = {
     //
     // ====================
@@ -57,7 +56,7 @@ export const config: Options.Testrunner = {
     // and 30 processes will get spawned. The property handles how many capabilities
     // from the same test should run tests.
     //
-    maxInstances: 1,
+    maxInstances: 10,
     //
     // If you have trouble getting all important capabilities together, check out the
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
@@ -74,7 +73,7 @@ export const config: Options.Testrunner = {
     // Define all options that are relevant for the WebdriverIO instance here
     //
     // Level of logging verbosity: trace | debug | info | warn | error | silent
-    logLevel:'info',
+    logLevel: 'info',
     //
     // Set specific log levels per logger
     // loggers:
@@ -114,9 +113,7 @@ export const config: Options.Testrunner = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: [
-        'safaridriver'
-    ],
+    services: ['safaridriver'],
 
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
@@ -138,7 +135,7 @@ export const config: Options.Testrunner = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec',['allure', {outputDir: './allure-report',disableWebdriverStepsReporting: true,
+    reporters: [['allure', {outputDir: './allure-results',disableWebdriverStepsReporting: true,
     disableWebdriverScreenshotsReporting: false,}]],
 
     //
@@ -161,7 +158,7 @@ export const config: Options.Testrunner = {
         // <boolean> fail if there are any undefined or pending steps
         strict: false,
         // <string> (expression) only execute the features or scenarios with tags matching the expression
-        tagExpression:'@login',
+        tagExpression: '',
         // <number> timeout for step definitions
         timeout: 60000,
         // <boolean> Enable this config to treat undefined definitions as warnings.
@@ -220,9 +217,8 @@ export const config: Options.Testrunner = {
      * @param {Array.<String>} specs        List of spec file paths that are to be run
      * @param {object}         browser      instance of created browser/device session
      */
-    //before: function (capabilities, specs) {
-      //  browser.takeScreenshot();
-    //},
+    // before: function (capabilities, specs) {
+    // },
     /**
      * Runs before a WebdriverIO command gets executed.
      * @param {string} commandName hook command name
@@ -254,9 +250,8 @@ export const config: Options.Testrunner = {
      * @param {IPickle}            scenario scenario pickle
      * @param {object}             context  Cucumber World object
      */
-    //beforeStep: function (step, scenario, context) {
-      //  await browser.takeScreenshot();
-    //},
+    // beforeStep: function (step, scenario, context) {
+    // },
     /**
      *
      * Runs after a Cucumber Step.
@@ -274,10 +269,10 @@ export const config: Options.Testrunner = {
    // }
        afterStep: async function (step, scenario, { error, duration, passed }, context) {
         
-          await browser.takeScreenshot();
+            await browser.takeScreenshot();
         
       }
-}
+},
 
     /**
      *
@@ -334,9 +329,9 @@ export const config: Options.Testrunner = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {<Object>} results object containing test results
      */
-  
-    
-    
+
+   
+        
     /**
     * Gets executed when a refresh happens.
     * @param {string} oldSessionId session ID of the old session
