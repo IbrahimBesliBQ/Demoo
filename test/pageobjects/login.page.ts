@@ -6,36 +6,42 @@ import Page from './page.js';
  * sub page containing specific selectors and methods for a specific page
  */
 class LoginPage extends Page {
-    /**
-     * define selectors using getter methods
-     */
-    public get inputUsername () {
-        return $('#username');
+    private uNameCr = "standard_user"
+    private uPassword = "secret_sauce"
+    public get username() {
+        return $('#user-name');
     }
 
-    public get inputPassword () {
+    public get password() {
         return $('#password');
     }
 
-    public get btnSubmit () {
-        return $('button[type="submit"]');
+    public get loginButton() {
+        return $('#login-button');
+    }
+    public get errorText() {
+        return $('.error-message-container');
+    }
+    public get errorUsername() {
+        return $('.error');
     }
 
-    /**
-     * a method to encapsule automation code to interact with the page
-     * e.g. to login using username and password
-     */
-    public async login (username: string, password: string) {
-        await this.inputUsername.setValue(username);
-        await this.inputPassword.setValue(password);
-        await this.btnSubmit.click();
+    private async clickOnLogInButton() {
+        await this.loginButton.click();
     }
-
-    /**
-     * overwrite specific options to adapt it to page object
-     */
-    public open () {
-        return super.open('login');
+    public async login(username: string, password: string) {
+        this.open();
+        await this.username.setValue(username)
+        await this.password.setValue(password)
+        await this.clickOnLogInButton()
+        
+    }
+    public async loginWithCr() {
+        this.open();
+        await this.username.setValue(this.uNameCr)
+        await this.password.setValue(this.uPassword)
+        await this.clickOnLogInButton()
+        
     }
 }
 

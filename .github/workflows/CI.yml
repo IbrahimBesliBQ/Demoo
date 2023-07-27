@@ -1,5 +1,5 @@
 name: CI
-on: [push, pull_request, workflow_dispatch] #applicable to any branch 
+on: [push, pull_request] #applicable to any branch 
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -13,8 +13,8 @@ jobs:
           run: npm install
         - name: Test
           run: npm run wdio-chrome
-          continue-on-error: true
         - uses: actions/upload-artifact@v3
+          if: failure()
           with:
-            name: allureReport
-            path: ./allure-report
+            name: logs
+            path: logs
