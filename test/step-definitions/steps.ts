@@ -2,7 +2,7 @@ import {Given, When, Then } from '@wdio/cucumber-framework';
 import LoginPage from '../pageobjects/login.page.js';
 import homePage from '../pageobjects/home.page.js';
 import checkoutPage from "../pageobjects/checkout.js";
-import itemPage from "../pageobjects/item.page.js"
+
 import { expect } from 'expect-webdriverio'
 import { faker } from '@faker-js/faker';
 
