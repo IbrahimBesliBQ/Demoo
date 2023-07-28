@@ -135,8 +135,10 @@ export const config: Options.Testrunner = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: [['allure', {outputDir: './allure-report',disableWebdriverStepsReporting: true,
-    disableWebdriverScreenshotsReporting: false,}]],
+    reporters: ['spec',['allure', {outputDir: './allure-report',disableWebdriverStepsReporting: true,
+    disableWebdriverScreenshotsReporting: false,
+    useCucumberStepReporter: false,
+    }]],
 
     //
     // If you are using Cucumber you need to specify the location of your step definitions.
@@ -329,8 +331,8 @@ export const config: Options.Testrunner = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {<Object>} results object containing test results
      */
-  
-    
+
+
     
     /**
     * Gets executed when a refresh happens.

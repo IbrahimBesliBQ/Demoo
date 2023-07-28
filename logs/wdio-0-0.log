@@ -1,4 +1,7 @@
-2023-07-27T23:10:37.871Z INFO @wdio/local-runner: Run worker command: run
-2023-07-27T23:10:37.942Z DEBUG @wdio/runner: init remote session
-2023-07-27T23:10:37.952Z DEBUG @wdio/utils:initialiseServices: initialise service "selenium-standalone" as NPM package
-2023-07-27T23:10:38.165Z ERROR @wdio/local-runner: Failed launching test session: Error: ENOENT: no such file or directory, open 'file:///Users/ibesli/Documents/Project/Demo/test/features/checkout.feature'
+2023-07-28T06:07:30.242Z INFO @wdio/local-runner: Run worker command: run
+2023-07-28T06:07:30.387Z ERROR @wdio/local-runner: Failed launching test session: Error: Couldn't find plugin "spec" reporter, neither as wdio scoped package "@wdio/spec-reporter" nor as community package "wdio-spec-reporter". Please make sure you have it installed!
+    at initialisePlugin (file:///Users/ibesli/Documents/Project/Demo/node_modules/@wdio/utils/build/initialisePlugin.js:36:11)
+    at async BaseReporter._loadReporter (file:///Users/ibesli/Documents/Project/Demo/node_modules/@wdio/runner/build/reporter.js:178:30)
+    at async Promise.all (index 0)
+    at async BaseReporter.initReporters (file:///Users/ibesli/Documents/Project/Demo/node_modules/@wdio/runner/build/reporter.js:23:27)
+    at async Runner.run (file:///Users/ibesli/Documents/Project/Demo/node_modules/@wdio/runner/build/index.js:68:9)

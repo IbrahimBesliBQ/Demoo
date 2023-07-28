@@ -1,13 +1,8 @@
 import { Options } from '@wdio/types'
 import allure  from 'allure-commandline';
-import url from 'node:url'
-import path from 'node:path'
-const drivers = {
-    chrome: { version: '114.0.5735.16' }, // https://chromedriver.chromium.org/
-    firefox: { version: '0.33.0' }, // https://github.com/mozilla/geckodriver/releases
-    chromiumedge: { version: '115.0.1901.188' } // https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/
-}
-const __dirname = url.fileURLToPath(new URL('.', import.meta.url))
+
+
+//const __dirname = url.fileURLToPath(new URL('.', import.meta.url))
 let baseUrl = "https://www.saucedemo.com/";
 //let env = process.env.Env
 //let urls = {
@@ -78,9 +73,9 @@ export const config: Options.Testrunner = {
     //
     capabilities: [{
         browserName: 'chrome',
-        'wdio:devtoolsOptions': {
-            headless: true
-        },
+     //   'wdio:devtoolsOptions': {
+        //    headless: true
+      //  },
     }],
 
     //
@@ -90,8 +85,8 @@ export const config: Options.Testrunner = {
     // Define all options that are relevant for the WebdriverIO instance here
     //
     // Level of logging verbosity: trace | debug | info | warn | error | silent
-    logLevel: 'trace',
-    outputDir: path.resolve(__dirname, 'logs'),
+    logLevel: 'info',
+   // outputDir: path.resolve(__dirname, 'logs'),
     //
     // Set specific log levels per logger
     // loggers:
@@ -132,9 +127,7 @@ export const config: Options.Testrunner = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: [
-        ['selenium-standalone', { drivers: { firefox: '0.33.0', chrome: true, chromiumedge: 'latest' } }]
-    ],
+    services: ['chromedriver'],
 
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
@@ -156,7 +149,8 @@ export const config: Options.Testrunner = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec'],
+    reporters: ['spec',['allure', {outputDir: './allure-results',disableWebdriverStepsReporting: true,
+    disableWebdriverScreenshotsReporting: true,}]],
 
     //
     // If you are using Cucumber you need to specify the location of your step definitions.
