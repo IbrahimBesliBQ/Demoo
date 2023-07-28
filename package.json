@@ -26,6 +26,8 @@
     "typescript": "^5.1.6",
     "wdio-chromedriver-service": "^8.1.1",
     "wdio-edgedriver-service": "^3.0.3",
+    "wdio-geckodriver-service": "^5.0.2",
+    "wdio-safaridriver-service": "^2.1.1",
     "wdio-wait-for": "^3.0.6"
   },
   "scripts": {
