@@ -4,6 +4,9 @@
 */
 export default class Page {
    
-    public open (path) {
-        return browser.url(path)
-    }}
+    public 	async open(path?: string): Promise<void> {
+		if (path) await browser.url(`${path}`);
+		else await browser.url('/');
+	}
+
+}

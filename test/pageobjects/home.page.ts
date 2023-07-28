@@ -1,4 +1,5 @@
-class HomePage {
+import Page from './page.ts';
+class HomePage extends Page {
     public get titleProducts() {
         return $('//*[.="Products"]')
     }
@@ -62,6 +63,10 @@ class HomePage {
 
     public get itemPriceBikeLight() {
         return $('.inventory_item:nth-child(2) .inventory_item_price')
+    }
+    // methods
+    override async open(): Promise<void>{
+        await super.open("/inventory.html");
     }
     public async addBackpackItemAndResetApp() {
         await this.addButtonItemBackpack.click();

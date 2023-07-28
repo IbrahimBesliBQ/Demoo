@@ -1,4 +1,4 @@
-class CheckoutPage {
+class CheckoutPage extends Page {
     public firstname = "";
     public get checkoutButton() {
         return $('#checkout')

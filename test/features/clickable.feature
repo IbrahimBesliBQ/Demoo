@@ -3,7 +3,7 @@ Feature: Login Btn is Clickable
 
    Scenario:As a User I can click all item add button 
 
-    GivenUser is the home page 
-    WhenUser click all item add button 
-    ThenUser should see items in cart
+    Given User is the home page 
+    When User click all item add button 
+    Then User should see items in cart
     

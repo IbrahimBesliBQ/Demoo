@@ -3,12 +3,16 @@
         "moduleResolution": "node",
         "module": "ESNext",
         "target": "es2022",
+        "paths": {
+            "test": ["./*"],
+        },
         "types": [
-            "node",
-            "@wdio/globals/types",
-            "expect-webdriverio",
-            "@wdio/cucumber-framework"
-        ],
+			"node",
+			"@wdio/globals/types",
+			"@wdio/selenium-standalone-service",
+			"@wdio/cucumber-framework",
+			"expect-webdriverio"
+		],
         "skipLibCheck": true,
         "noEmit": true,
         "allowImportingTsExtensions": true,
@@ -19,7 +23,4 @@
         "noUnusedParameters": true,
         "noFallthroughCasesInSwitch": true
     },
-    "include": [
-        "src"
-    ]
 }

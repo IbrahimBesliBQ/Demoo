@@ -1,6 +1,4 @@
-import { ChainablePromiseElement } from 'webdriverio';
-
-import Page from './page.js';
+import Page from './page.ts';
 
 /**
  * sub page containing specific selectors and methods for a specific page
@@ -8,10 +6,10 @@ import Page from './page.js';
 class LoginPage extends Page {
     private uNameCr = "standard_user"
     private uPassword = "secret_sauce"
-    public get username() {
+    // elements
+    public get username(){
         return $('#user-name');
     }
-
     public get password() {
         return $('#password');
     }
@@ -25,7 +23,10 @@ class LoginPage extends Page {
     public get errorUsername() {
         return $('.error');
     }
-
+    // methods
+    override async open(): Promise<void>{
+        await super.open("/");
+    }
     private async clickOnLogInButton() {
         await this.loginButton.click();
     }

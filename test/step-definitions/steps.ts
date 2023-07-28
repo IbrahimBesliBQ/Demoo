@@ -45,7 +45,7 @@ When(/^User add item and remove item/, async () => {
 
 Then(/^items is removed/, async () => {
     (await homePage.removeButtonItemBackpack).isDisplayed()
-
+    await homePage.open();
 });
 
 Given(/^User is on the checkout page/, async () => {

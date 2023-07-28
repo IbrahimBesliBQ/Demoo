@@ -3,8 +3,8 @@ Feature: Login functionality
     
      Scenario Outline: User is able to login successfully
         
-        WhenUser login with <username> and <password>
-        ThenUser is logged in
+        When User login with <username> and <password>
+        Then User is logged in
 
     Examples:
         |username     |password     |
