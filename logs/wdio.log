@@ -1,26 +1,26 @@
-2023-07-28T07:36:36.210Z INFO @wdio/cli:launcher: Run onPrepare hook
-2023-07-28T07:36:37.801Z INFO @wdio/cli:launcher: Run onWorkerStart hook
-2023-07-28T07:36:37.801Z INFO @wdio/cli:launcher: Run onWorkerStart hook
-2023-07-28T07:36:37.801Z INFO @wdio/cli:launcher: Run onWorkerStart hook
-2023-07-28T07:36:37.801Z INFO @wdio/cli:launcher: Run onWorkerStart hook
-2023-07-28T07:36:37.801Z INFO @wdio/cli:launcher: Run onWorkerStart hook
-2023-07-28T07:36:37.801Z INFO @wdio/cli:launcher: Run onWorkerStart hook
-2023-07-28T07:36:37.801Z INFO @wdio/cli:launcher: Run onWorkerStart hook
-2023-07-28T07:36:37.802Z INFO @wdio/local-runner: Start worker 0-0 with arg: run,./wdio.selenium.conf.ts
-2023-07-28T07:36:37.803Z INFO @wdio/local-runner: Start worker 0-1 with arg: run,./wdio.selenium.conf.ts
-2023-07-28T07:36:37.804Z INFO @wdio/local-runner: Start worker 0-2 with arg: run,./wdio.selenium.conf.ts
-2023-07-28T07:36:37.804Z INFO @wdio/local-runner: Start worker 0-3 with arg: run,./wdio.selenium.conf.ts
-2023-07-28T07:36:37.804Z INFO @wdio/local-runner: Start worker 0-4 with arg: run,./wdio.selenium.conf.ts
-2023-07-28T07:36:37.805Z INFO @wdio/local-runner: Start worker 0-5 with arg: run,./wdio.selenium.conf.ts
-2023-07-28T07:36:37.806Z INFO @wdio/local-runner: Start worker 0-6 with arg: run,./wdio.selenium.conf.ts
-2023-07-28T07:36:55.004Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
-2023-07-28T07:36:55.106Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
-2023-07-28T07:36:55.106Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
-2023-07-28T07:36:55.147Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
-2023-07-28T07:36:55.147Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
-2023-07-28T07:36:55.148Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
-2023-07-28T07:36:55.199Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
-2023-07-28T07:36:55.199Z INFO @wdio/cli:launcher: Run onComplete hook
-2023-07-28T07:36:55.199Z INFO @wdio/selenium-standalone-service: shutting down all browsers
-2023-07-28T07:36:55.222Z INFO @wdio/local-runner: Shutting down spawned worker
-2023-07-28T07:36:55.473Z INFO @wdio/local-runner: Waiting for 0 to shut down gracefully
+2023-07-28T07:45:47.840Z INFO @wdio/cli:launcher: Run onPrepare hook
+2023-07-28T07:45:49.828Z INFO @wdio/cli:launcher: Run onWorkerStart hook
+2023-07-28T07:45:49.829Z INFO @wdio/cli:launcher: Run onWorkerStart hook
+2023-07-28T07:45:49.829Z INFO @wdio/cli:launcher: Run onWorkerStart hook
+2023-07-28T07:45:49.829Z INFO @wdio/cli:launcher: Run onWorkerStart hook
+2023-07-28T07:45:49.829Z INFO @wdio/cli:launcher: Run onWorkerStart hook
+2023-07-28T07:45:49.829Z INFO @wdio/cli:launcher: Run onWorkerStart hook
+2023-07-28T07:45:49.829Z INFO @wdio/cli:launcher: Run onWorkerStart hook
+2023-07-28T07:45:49.829Z INFO @wdio/local-runner: Start worker 0-0 with arg: run,./wdio.selenium.conf.ts
+2023-07-28T07:45:49.830Z INFO @wdio/local-runner: Start worker 0-1 with arg: run,./wdio.selenium.conf.ts
+2023-07-28T07:45:49.831Z INFO @wdio/local-runner: Start worker 0-2 with arg: run,./wdio.selenium.conf.ts
+2023-07-28T07:45:49.831Z INFO @wdio/local-runner: Start worker 0-3 with arg: run,./wdio.selenium.conf.ts
+2023-07-28T07:45:49.832Z INFO @wdio/local-runner: Start worker 0-4 with arg: run,./wdio.selenium.conf.ts
+2023-07-28T07:45:49.832Z INFO @wdio/local-runner: Start worker 0-5 with arg: run,./wdio.selenium.conf.ts
+2023-07-28T07:45:49.833Z INFO @wdio/local-runner: Start worker 0-6 with arg: run,./wdio.selenium.conf.ts
+2023-07-28T07:46:07.551Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
+2023-07-28T07:46:07.561Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
+2023-07-28T07:46:07.562Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
+2023-07-28T07:46:07.562Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
+2023-07-28T07:46:07.567Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
+2023-07-28T07:46:07.600Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
+2023-07-28T07:46:07.609Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
+2023-07-28T07:46:07.609Z INFO @wdio/cli:launcher: Run onComplete hook
+2023-07-28T07:46:07.609Z INFO @wdio/selenium-standalone-service: shutting down all browsers
+2023-07-28T07:46:07.632Z INFO @wdio/local-runner: Shutting down spawned worker
+2023-07-28T07:46:07.883Z INFO @wdio/local-runner: Waiting for 0 to shut down gracefully

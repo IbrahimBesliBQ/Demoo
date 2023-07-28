@@ -1,30 +1,30 @@
-2023-07-28T07:36:38.557Z INFO @wdio/local-runner: Run worker command: run
-2023-07-28T07:36:38.945Z INFO webdriver: Initiate new session using the WebDriver protocol
-2023-07-28T07:36:39.010Z INFO webdriver: [POST] http://localhost:4444/wd/hub/session
-2023-07-28T07:36:39.010Z INFO webdriver: DATA {
+2023-07-28T07:45:50.631Z INFO @wdio/local-runner: Run worker command: run
+2023-07-28T07:45:51.009Z INFO webdriver: Initiate new session using the WebDriver protocol
+2023-07-28T07:45:51.080Z INFO webdriver: [POST] http://localhost:4444/wd/hub/session
+2023-07-28T07:45:51.080Z INFO webdriver: DATA {
   capabilities: {
     alwaysMatch: { browserName: 'chrome', 'wdio:devtoolsOptions': [Object] },
     firstMatch: [ {} ]
   },
   desiredCapabilities: { browserName: 'chrome', 'wdio:devtoolsOptions': { headless: true } }
 }
-2023-07-28T07:36:54.839Z INFO webdriver: COMMAND getLogTypes()
-2023-07-28T07:36:54.840Z INFO webdriver: [GET] http://localhost:4444/wd/hub/session/189779ac8457a45f83d947c0e78e743b/se/log/types
-2023-07-28T07:36:54.858Z INFO webdriver: RESULT [ 'browser', 'driver' ]
-2023-07-28T07:36:54.859Z INFO webdriver: COMMAND getLogs("driver")
-2023-07-28T07:36:54.859Z INFO webdriver: COMMAND getLogs("browser")
-2023-07-28T07:36:54.859Z INFO webdriver: [POST] http://localhost:4444/wd/hub/session/189779ac8457a45f83d947c0e78e743b/se/log
-2023-07-28T07:36:54.859Z INFO webdriver: DATA { type: 'driver' }
-2023-07-28T07:36:54.860Z INFO webdriver: [POST] http://localhost:4444/wd/hub/session/189779ac8457a45f83d947c0e78e743b/se/log
-2023-07-28T07:36:54.860Z INFO webdriver: DATA { type: 'browser' }
-2023-07-28T07:36:54.879Z INFO webdriver: RESULT [
+2023-07-28T07:46:07.245Z INFO webdriver: COMMAND getLogTypes()
+2023-07-28T07:46:07.245Z INFO webdriver: [GET] http://localhost:4444/wd/hub/session/eaea2834c9e35ebdb7b83b3230a0e590/se/log/types
+2023-07-28T07:46:07.266Z INFO webdriver: RESULT [ 'browser', 'driver' ]
+2023-07-28T07:46:07.267Z INFO webdriver: COMMAND getLogs("driver")
+2023-07-28T07:46:07.267Z INFO webdriver: COMMAND getLogs("browser")
+2023-07-28T07:46:07.267Z INFO webdriver: [POST] http://localhost:4444/wd/hub/session/eaea2834c9e35ebdb7b83b3230a0e590/se/log
+2023-07-28T07:46:07.267Z INFO webdriver: DATA { type: 'driver' }
+2023-07-28T07:46:07.267Z INFO webdriver: [POST] http://localhost:4444/wd/hub/session/eaea2834c9e35ebdb7b83b3230a0e590/se/log
+2023-07-28T07:46:07.267Z INFO webdriver: DATA { type: 'browser' }
+2023-07-28T07:46:07.280Z INFO webdriver: RESULT [
   {
     level: 'WARNING',
     message: 'This version of ChromeDriver has not been tested with Chrome version 115.\n',
-    timestamp: 1690529814034
+    timestamp: 1690530366395
   }
 ]
-2023-07-28T07:36:54.894Z INFO webdriver: RESULT []
-2023-07-28T07:36:54.894Z INFO webdriver: COMMAND deleteSession()
-2023-07-28T07:36:54.894Z INFO webdriver: [DELETE] http://localhost:4444/wd/hub/session/189779ac8457a45f83d947c0e78e743b
-2023-07-28T07:36:54.996Z INFO webdriver: RESULT null
+2023-07-28T07:46:07.295Z INFO webdriver: RESULT []
+2023-07-28T07:46:07.295Z INFO webdriver: COMMAND deleteSession()
+2023-07-28T07:46:07.296Z INFO webdriver: [DELETE] http://localhost:4444/wd/hub/session/eaea2834c9e35ebdb7b83b3230a0e590
+2023-07-28T07:46:07.449Z INFO webdriver: RESULT null
