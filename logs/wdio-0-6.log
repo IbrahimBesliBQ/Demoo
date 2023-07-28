@@ -1,7 +1,27 @@
-2023-07-28T06:07:30.266Z INFO @wdio/local-runner: Run worker command: run
-2023-07-28T06:07:30.436Z ERROR @wdio/local-runner: Failed launching test session: Error: Couldn't find plugin "spec" reporter, neither as wdio scoped package "@wdio/spec-reporter" nor as community package "wdio-spec-reporter". Please make sure you have it installed!
-    at initialisePlugin (file:///Users/ibesli/Documents/Project/Demo/node_modules/@wdio/utils/build/initialisePlugin.js:36:11)
-    at async BaseReporter._loadReporter (file:///Users/ibesli/Documents/Project/Demo/node_modules/@wdio/runner/build/reporter.js:178:30)
-    at async Promise.all (index 0)
-    at async BaseReporter.initReporters (file:///Users/ibesli/Documents/Project/Demo/node_modules/@wdio/runner/build/reporter.js:23:27)
-    at async Runner.run (file:///Users/ibesli/Documents/Project/Demo/node_modules/@wdio/runner/build/index.js:68:9)
+2023-07-28T07:24:06.667Z INFO @wdio/local-runner: Run worker command: run
+2023-07-28T07:24:07.123Z INFO webdriver: Initiate new session using the WebDriver protocol
+2023-07-28T07:24:07.198Z INFO webdriver: [POST] http://localhost:4444/wd/hub/session
+2023-07-28T07:24:07.199Z INFO webdriver: DATA {
+  capabilities: { alwaysMatch: { browserName: 'chrome' }, firstMatch: [ {} ] },
+  desiredCapabilities: { browserName: 'chrome' }
+}
+2023-07-28T07:24:23.318Z INFO webdriver: COMMAND getLogTypes()
+2023-07-28T07:24:23.318Z INFO webdriver: [GET] http://localhost:4444/wd/hub/session/1de113099463b490088536295dae2184/se/log/types
+2023-07-28T07:24:23.335Z INFO webdriver: RESULT [ 'browser', 'driver' ]
+2023-07-28T07:24:23.338Z INFO webdriver: COMMAND getLogs("driver")
+2023-07-28T07:24:23.338Z INFO webdriver: COMMAND getLogs("browser")
+2023-07-28T07:24:23.338Z INFO webdriver: [POST] http://localhost:4444/wd/hub/session/1de113099463b490088536295dae2184/se/log
+2023-07-28T07:24:23.338Z INFO webdriver: DATA { type: 'driver' }
+2023-07-28T07:24:23.338Z INFO webdriver: [POST] http://localhost:4444/wd/hub/session/1de113099463b490088536295dae2184/se/log
+2023-07-28T07:24:23.338Z INFO webdriver: DATA { type: 'browser' }
+2023-07-28T07:24:23.349Z INFO webdriver: RESULT [
+  {
+    level: 'WARNING',
+    message: 'This version of ChromeDriver has not been tested with Chrome version 115.\n',
+    timestamp: 1690529062410
+  }
+]
+2023-07-28T07:24:23.350Z INFO webdriver: RESULT []
+2023-07-28T07:24:23.351Z INFO webdriver: COMMAND deleteSession()
+2023-07-28T07:24:23.351Z INFO webdriver: [DELETE] http://localhost:4444/wd/hub/session/1de113099463b490088536295dae2184
+2023-07-28T07:24:23.618Z INFO webdriver: RESULT null
