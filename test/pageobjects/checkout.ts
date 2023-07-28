@@ -1,5 +1,6 @@
-class CheckoutPage extends Page {
-    public firstname = "";
+    import Page from "./page.ts";
+    class CheckoutPage extends Page {
+        public firstname = "";
     public get checkoutButton() {
         return $('#checkout')
     }
