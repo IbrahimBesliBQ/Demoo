@@ -4,11 +4,6 @@ let baseUrl = "https://www.saucedemo.com/";
 
 
 
-const drivers = {
-    chrome: { version: '114.0.5735.90' }, // https://chromedriver.chromium.org/
-    firefox: { version: '0.33.0' }, // https://github.com/mozilla/geckodriver/releases
-    chromiumedge: { version: '115.0.1901.188' } // https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/
-}
 
 
 export const config: Options.Testrunner = {
@@ -73,9 +68,10 @@ export const config: Options.Testrunner = {
     //
     capabilities: [{
         browserName: 'chrome',
-        'wdio:devtoolsOptions': {
-            headless: true
-    }}],
+        'goog:chromeOptions': {
+          args: ['--headless', '--disable-gpu'] // Tarayıcıyı başlatırken kullanılacak seçenekleri burada belirtebilirsiniz.
+        }
+      }],
 
     //
     // ===================
@@ -125,11 +121,7 @@ export const config: Options.Testrunner = {
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
     services: [
-        ['selenium-standalone', {
-            logPath: 'logs',
-            installArgs: { drivers }, // drivers to install
-            args: { drivers } // drivers to use
-        }]
+        'chromedriver'
     ],
 
     // Framework you want to run your specs with.
@@ -154,7 +146,7 @@ export const config: Options.Testrunner = {
     // see also: https://webdriver.io/docs/dot-reporter
     reporters: ['spec',['allure', {outputDir: './allure-report',disableWebdriverStepsReporting: true,
     disableWebdriverScreenshotsReporting: false,
-    useCucumberStepReporter: false,
+    useCucumberStepReporter: true,
     }]],
 
     //
