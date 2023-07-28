@@ -6,7 +6,7 @@ import path from 'node:path'
 
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url))
 const drivers = {
-    chrome: { version: '114.0.5735.16' }, // https://chromedriver.chromium.org/
+    chrome: { version: '114.0.5735.90' }, // https://chromedriver.chromium.org/
     firefox: { version: '0.33.0' }, // https://github.com/mozilla/geckodriver/releases
     chromiumedge: { version: '115.0.1901.188' } // https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/
 }
