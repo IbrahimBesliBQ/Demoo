@@ -73,10 +73,10 @@ export const config: Options.Testrunner = {
     //
     capabilities: [{
         browserName: 'chrome',
-     //   'wdio:devtoolsOptions': {
-        //    headless: true
+      'wdio:devtoolsOptions': {
+           headless: true
       //  },
-    }],
+    }  }],
 
     //
     // ===================
@@ -149,8 +149,7 @@ export const config: Options.Testrunner = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec',['allure', {outputDir: './allure-results',disableWebdriverStepsReporting: true,
-    disableWebdriverScreenshotsReporting: true,}]],
+    reporters: ['spec',['allure', {outputDir: './allure-results'}]],
 
     //
     // If you are using Cucumber you need to specify the location of your step definitions.
