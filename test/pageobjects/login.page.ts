@@ -24,21 +24,21 @@ class LoginPage extends Page {
         return $('.error');
     }
     // methods
-    override async open(): Promise<void>{
+    async open(): Promise<void>{
         await super.open("/");
     }
     private async clickOnLogInButton() {
         await this.loginButton.click();
     }
     public async login(username: string, password: string) {
-       this.open
+       this.open()
         await this.username.setValue(username)
         await this.password.setValue(password)
         await this.clickOnLogInButton()
         
     }
     public async loginWithCr() {
-        this.open
+        this.open()
         await this.username.setValue(this.uNameCr)
         await this.password.setValue(this.uPassword)
         await this.clickOnLogInButton()

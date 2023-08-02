@@ -1,5 +1,5 @@
 import type { Options } from '@wdio/types'
-import allure  from 'allure-commandline';
+
 let baseUrl = "https://www.saucedemo.com/";
 
 export const config: Options.Testrunner = {

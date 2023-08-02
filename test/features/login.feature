@@ -1,4 +1,4 @@
-@login
+@smoke
 Feature: Login functionality 
     
      Scenario Outline: User is able to login successfully

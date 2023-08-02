@@ -1,5 +1,5 @@
-import  Options  from '@wdio/types';
-import allure  from 'allure-commandline';
+import  {Options}  from '@wdio/types';
+
 let baseUrl = "https://www.saucedemo.com/";
 
 export const config: Options.Testrunner = {
@@ -135,7 +135,7 @@ export const config: Options.Testrunner = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec', ['allure', {outputDir: './allure-results',disableWebdriverStepsReporting: true,
+    reporters: ['spec', ['allure', {outputDir: './allure-report',disableWebdriverStepsReporting: true,
     disableWebdriverScreenshotsReporting: false,}]],
 
     //

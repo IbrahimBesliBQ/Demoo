@@ -44,7 +44,6 @@ class HomePage extends Page {
         return $('#add-to-cart-test.allthethings()-t-shirt-(red)')
     }
  
-
     public get basketIcon() {
         return $('.shopping_cart_link')
     }
@@ -65,13 +64,21 @@ class HomePage extends Page {
         return $('.inventory_item:nth-child(2) .inventory_item_price')
     }
     // methods
-    override async open(): Promise<void>{
+    async open(): Promise<void>{
         await super.open("/inventory.html");
     }
     public async addBackpackItemAndResetApp() {
         await this.addButtonItemBackpack.click();
-        await  this.menuButton.click();
+        await this.menuButton.click();
         await this.resetAppStateButton.click();
+    }
+    public async addAllItem(){
+        await this.addButtonItemBackpack.click();
+        await this.addButtonItemBikeLight.click();
+        await this.addButtonJacket.click();
+        await this.addButtonOnesie.click();
+        await this.addButtonTshirt.click();
+        await this.addButtonTshirtRed.click();
     }
 }
 export default new HomePage();

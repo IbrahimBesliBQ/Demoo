@@ -11,11 +11,11 @@
     "@wdio/selenium-standalone-service": "^8.13.13",
     "@wdio/spec-reporter": "^8.12.2",
     "chromedriver": "^114.0.3",
-    "eslint": "^8.45.0",
+    "eslint": "^8.46.0",
     "eslint-config-semistandard": "^17.0.0",
     "eslint-config-standard": "^17.1.0",
     "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-n": "^15.7.0",
+    "eslint-plugin-n": "^16.0.1",
     "eslint-plugin-promise": "^6.1.1",
     "expect-webdriverio": "^4.2.7",
     "husky": "^8.0.3",
@@ -28,14 +28,13 @@
     "webdriverio": "^8.13.13"
   },
   "scripts": {
-    "wdio": "wdio run ./wdio.conf.ts",
     "lint": "eslint .",
     "prepare": "husky install",
-    "wdio-chrome": "wdio run ./wdio.chrome.conf.ts ",
+    "wdio-chrome": "wdio run ./wdio.chrome.conf.ts --cucumberOpts.tagExpression=@smoke ",
     "wdio-safari": "wdio run ./wdio.safari.conf.ts --cucumberOpts.tagExpression=@smoke",
     "wdio-firefox": "wdio run ./wdio.firefox.conf.ts --cucumberOpts.tagExpression=@smoke",
-    "wdio-edge": "wdio run ./wdio.edge.conf.ts",
-    "wdio-selenium": "wdio run ./wdio.selenium.conf.ts",
+    "wdio-edge": "wdio run ./wdio.edge.conf.ts --cucumberOpts.tagExpression=@smoke",
+    "wdio-selenium": "wdio run ./wdio.selenium.conf.ts --cucumberOpts.tagExpression=@smoke",
     "allure-report": "allure generate --clean allure-results allure-report"
   }
 }

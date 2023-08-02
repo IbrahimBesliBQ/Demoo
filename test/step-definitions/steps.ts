@@ -57,7 +57,8 @@ Given(/^User is on the checkout page/, async () => {
 });
 When(/^User fill in all customer informations fields/, async () => {
    checkoutPage.checkoutProcess(faker.name.firstName(),faker.name.lastName(),faker.address.zipCode());
-    (await checkoutPage.continueButton).click();
+  
+   
 });
 Then(/^User should see finish message/, async () => {
     (await checkoutPage.finishButton).click();
@@ -75,8 +76,9 @@ When(/^User click reset App state button/, async () => {
  
 });
 Then(/^User can succesfull logout/, async () => {
-    (await homePage.logoutButton).click();
-     (await LoginPage.loginButton).isDisplayed();
+    (await homePage.menuButton).click()
+    await homePage.logoutButton.click();
+     await LoginPage.loginButton.isDisplayed();
 });
 
 Given(/^Standard_user logged in/, async () => {
@@ -97,7 +99,7 @@ When(/^User add item and reset application/, async () => {
 });
 
 Then(/^Item is not selected/, async () => {
-    await expect(homePage.addButtonItemBackpack).toBeDisplayed();
+    await expect(homePage.removeButtonItemBackpack).toBeDisplayed();
 });
 
 Then(/^User should see two item in checkout page/, async () => {
@@ -110,4 +112,13 @@ When(/^User click login button /, async () => {
 
 Then(/^User should see error message/, async () => {
     await expect(LoginPage.errorUsername).toBeDisplayed();
+});
+When(/^User click all item add button/, async () => {
+    await homePage.addAllItem();
+});
+
+Then(/^User should see items in cart/, async () => {
+    (await homePage.basketIcon).click();
+    (await checkoutPage.cartList).isDisplayed
+
 });

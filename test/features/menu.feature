@@ -1,4 +1,4 @@
-@smoke
+@fehler
 Feature: Menu functionality
 
     Scenario: Resetapp state function

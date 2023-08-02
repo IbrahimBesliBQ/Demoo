@@ -13,8 +13,8 @@ Feature: Shopping functionality
         Then items is removed
   
    Scenario
-   GivenUser is the home page
-   WhenUser buy two items
-   ThenUser should see two item in checkout page
+   Given User is the home page
+   When User buy two items
+   Then User should see two item in checkout page
 
         
