@@ -13,8 +13,8 @@ Feature: Login functionality
         
    
     Scenario: User is login with invalid username and invalid password
-        WhenUser login with invalid <username> and invalid <password>
-        ThenUser is not logged in
+        When User login with invalid <username> and invalid <password>
+        Then User is not logged in
 
         Examples:
             |username |password | 
@@ -22,7 +22,7 @@ Feature: Login functionality
             
     Scenario:As a User I can click login button  
         
-        WhenUser click login button 
-        ThenUser should see error message
+        When User click login button
+        Then User should see error message
 
     

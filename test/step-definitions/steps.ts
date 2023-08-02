@@ -102,7 +102,7 @@ Then(/^User should see two item in checkout page/, async () => {
    await expect(checkoutPage.cartitem).toBeDisplayed();
 
 });
-When(/^User click login button /, async () => {
+When(/^User click login button/, async () => {
     await LoginPage.loginButton.click();
 });
 

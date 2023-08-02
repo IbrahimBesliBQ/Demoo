@@ -34,7 +34,7 @@
     "wdio-safari": "wdio run ./wdio.safari.conf.ts --cucumberOpts.tagExpression=@smoke",
     "wdio-firefox": "wdio run ./wdio.firefox.conf.ts --cucumberOpts.tagExpression=@smoke",
     "wdio-edge": "wdio run ./wdio.edge.conf.ts --cucumberOpts.tagExpression=@smoke",
-    "wdio-selenium": "wdio run ./wdio.selenium.conf.ts --cucumberOpts.tagExpression=@smoke",
+    "wdio-selenium": "wdio run ./wdio.selenium.conf.ts",
     "allure-report": "allure generate --clean allure-results -o allure-report"
   }
 }
