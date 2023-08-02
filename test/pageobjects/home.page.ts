@@ -9,11 +9,11 @@ class HomePage extends Page {
     }
 
     public get menuButton() {
-        return $('//button[@id="react-burger-menu-btn"]')
+        return $('#react-burger-menu-btn')
     }
 
     public get logoutButton() {
-        return $('#logout_sidebar_link')
+        return $("#logout_sidebar_link")
     }
 
     public get resetAppStateButton() {
@@ -57,7 +57,7 @@ class HomePage extends Page {
         await super.open("/");
     }
     public async addBackpackItemAndResetApp() {
-        await this.addButtonItemBackpack.click();
+        await this.addButtonItemBikeLight.click();
         await this.menuButton.click();
         await this.resetAppStateButton.click();
     }

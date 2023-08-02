@@ -79,15 +79,12 @@ Given(/^Standard_user logged in/, async () => {
 });
 
 When(/^User log out from aplication/, async () => {
-   await homePage.logOut();
+    await homePage.menuButton.click();
+       await homePage.logoutButton.click();
 
 });
 Then(/^User display loginBttn/, async () => {
     await LoginPage.loginButton.isDisplayed();
-});
-
-When(/^User add item and reset application/, async () => {
-    await homePage.addBackpackItemAndResetApp();
 });
 
 Then(/^Item is not selected/, async () => {
