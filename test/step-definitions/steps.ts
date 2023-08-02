@@ -30,24 +30,21 @@ Given(/^User is the home page/, async () => {
 When(/^User buy two items/, async () => {
     await homePage.addButtonItemBackpack.click();
     await homePage.addButtonItemBikeLight.click();
-    
-    
-
+    await homePage.basketIcon.click();
 });
 Then(/^User go to the checkout page/, async () => {
-
-    await homePage.basketIcon.click();
-    await checkoutPage.checkoutButton.isDisplayed()
+    await checkoutPage.checkoutButton.isDisplayed();
+    
 
 });
 When(/^User add item and remove item/, async () => {
     await homePage.addButtonItemBackpack.click();
     await homePage.removeButtonItemBackpack.click();
+
 });
 
 Then(/^items is removed/, async () => {
-    await homePage.removeButtonItemBackpack.isDisplayed()
-    await homePage.open();
+    await expect(homePage.addButtonItemBackpack).toBeDisplayed();
 });
 
 Given(/^User is on the checkout page/, async () => {

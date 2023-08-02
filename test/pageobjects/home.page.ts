@@ -84,5 +84,10 @@ class HomePage extends Page {
        await this.logoutButton.click();
 
     }
+    public async resetApp() {
+       
+        await this.menuButton.click();
+        await this.resetAppStateButton.click();
+    }
 }
 export default new HomePage();
