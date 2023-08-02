@@ -31,7 +31,7 @@
     "lint": "eslint .",
     "prepare": "husky install",
     "wdio-chrome": "wdio run ./wdio.chrome.conf.ts ",
-    "wdio-safari": "wdio run ./wdio.safari.conf.ts --cucumberOpts.tagExpression=@smoke",
+    "wdio-safari": "wdio run ./wdio.safari.conf.ts ",
     "wdio-firefox": "wdio run ./wdio.firefox.conf.ts --cucumberOpts.tagExpression=@smoke",
     "wdio-edge": "wdio run ./wdio.edge.conf.ts ",
     "wdio-selenium": "wdio run ./wdio.selenium.conf.ts",
