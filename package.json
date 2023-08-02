@@ -30,7 +30,7 @@
   "scripts": {
     "lint": "eslint .",
     "prepare": "husky install",
-    "wdio-chrome": "wdio run ./wdio.chrome.conf.ts --cucumberOpts.tagExpression=@smoke ",
+    "wdio-chrome": "wdio run ./wdio.chrome.conf.ts",
     "wdio-safari": "wdio run ./wdio.safari.conf.ts --cucumberOpts.tagExpression=@smoke",
     "wdio-firefox": "wdio run ./wdio.firefox.conf.ts --cucumberOpts.tagExpression=@smoke",
     "wdio-edge": "wdio run ./wdio.edge.conf.ts --cucumberOpts.tagExpression=@smoke",

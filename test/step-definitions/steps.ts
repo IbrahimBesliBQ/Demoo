@@ -28,23 +28,25 @@ Given(/^User is the home page/, async () => {
 });
 
 When(/^User buy two items/, async () => {
-    (await homePage.addButtonItemBackpack).click();
-    (await homePage.addButtonItemBikeLight).click();
-    (await homePage.basketIcon).click();
+    await homePage.addButtonItemBackpack.click();
+    await homePage.addButtonItemBikeLight.click();
+    
     
 
 });
 Then(/^User go to the checkout page/, async () => {
-    (await checkoutPage.checkoutButton).isDisplayed()
+
+    await homePage.basketIcon.click();
+    await checkoutPage.checkoutButton.isDisplayed()
 
 });
 When(/^User add item and remove item/, async () => {
-    (await homePage.addButtonItemBackpack).click();
-    (await homePage.removeButtonItemBackpack).click();
+    await homePage.addButtonItemBackpack.click();
+    await homePage.removeButtonItemBackpack.click();
 });
 
 Then(/^items is removed/, async () => {
-    (await homePage.removeButtonItemBackpack).isDisplayed()
+    await homePage.removeButtonItemBackpack.isDisplayed()
     await homePage.open();
 });
 
@@ -52,8 +54,8 @@ Given(/^User is on the checkout page/, async () => {
     await LoginPage.loginWithCr();
     await homePage.addButtonItemBackpack.click();
     await homePage.addButtonItemBikeLight.click();
-    (await homePage.basketIcon).click();   
-    (await checkoutPage.checkoutButton).click()
+    await homePage.basketIcon.click();   
+    await checkoutPage.checkoutButton.click()
 });
 When(/^User fill in all customer informations fields/, async () => {
    checkoutPage.checkoutProcess(faker.name.firstName(),faker.name.lastName(),faker.address.zipCode());
@@ -61,24 +63,18 @@ When(/^User fill in all customer informations fields/, async () => {
    
 });
 Then(/^User should see finish message/, async () => {
-    (await checkoutPage.finishButton).click();
+    await checkoutPage.finishButton.click();
     await expect(checkoutPage.checkoutMessage).toBeDisplayed();
 
 });
-Given(/^User is on the home page and add item a card/, async () => {
-    await LoginPage.loginWithCr();
-    (await homePage.addButtonItemBackpack).click();
+When(/^User add item and click reset App state button/, async () => {
+   await homePage.addBackpackItemAndResetApp();
+
 });
-When(/^User click reset App state button/, async () => {
-   await expect(homePage.shoppingCardBadget).toBeDisplayed();
-    (await homePage.resetAppStateButton).click();
-    
- 
-});
-Then(/^User can succesfull logout/, async () => {
-    (await homePage.menuButton).click()
+Then(/^User can click logout button/, async () => {
+    await homePage.menuButton.click();
     await homePage.logoutButton.click();
-     await LoginPage.loginButton.isDisplayed();
+     
 });
 
 Given(/^Standard_user logged in/, async () => {
@@ -91,7 +87,7 @@ When(/^User log out from aplication/, async () => {
 
 });
 Then(/^User display loginBttn/, async () => {
-    (await LoginPage.loginButton).isDisplayed();
+    await LoginPage.loginButton.isDisplayed();
 });
 
 When(/^User add item and reset application/, async () => {
@@ -107,7 +103,7 @@ Then(/^User should see two item in checkout page/, async () => {
 
 });
 When(/^User click login button /, async () => {
-    (await LoginPage.loginButton).click();
+    await LoginPage.loginButton.click();
 });
 
 Then(/^User should see error message/, async () => {
@@ -118,7 +114,7 @@ When(/^User click all item add button/, async () => {
 });
 
 Then(/^User should see items in cart/, async () => {
-    (await homePage.basketIcon).click();
-    (await checkoutPage.cartList).isDisplayed
+    await homePage.basketIcon.click();
+    await checkoutPage.cartList.isDisplayed
 
 });

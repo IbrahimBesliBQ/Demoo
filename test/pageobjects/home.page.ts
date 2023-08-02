@@ -9,7 +9,7 @@ class HomePage extends Page {
     }
 
     public get menuButton() {
-        return $('.bm-burger-button')
+        return $('//button[@id="react-burger-menu-btn"]')
     }
 
     public get logoutButton() {
@@ -64,8 +64,8 @@ class HomePage extends Page {
         return $('.inventory_item:nth-child(2) .inventory_item_price')
     }
     // methods
-    async open(): Promise<void>{
-        await super.open("/inventory.html");
+    async open(){
+        await super.open("/");
     }
     public async addBackpackItemAndResetApp() {
         await this.addButtonItemBackpack.click();
@@ -78,7 +78,11 @@ class HomePage extends Page {
         await this.addButtonJacket.click();
         await this.addButtonOnesie.click();
         await this.addButtonTshirt.click();
-        await this.addButtonTshirtRed.click();
+    }
+    public async logOut() {
+       await this.menuButton.click();
+       await this.logoutButton.click();
+
     }
 }
 export default new HomePage();
