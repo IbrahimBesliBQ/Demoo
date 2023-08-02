@@ -52,17 +52,6 @@ class HomePage extends Page {
         return $('.shopping_cart_badge')
     }
 
-    public get goToProductBackpackPage() {
-        return $('//div[.="Sauce Labs Backpack"]')
-    }
-
-    public get itemPriceBackpack() {
-        return $('.inventory_item:nth-child(1) .inventory_item_price')
-    }
-
-    public get itemPriceBikeLight() {
-        return $('.inventory_item:nth-child(2) .inventory_item_price')
-    }
     // methods
     async open(){
         await super.open("/");

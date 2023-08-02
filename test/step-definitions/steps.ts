@@ -79,8 +79,7 @@ Given(/^Standard_user logged in/, async () => {
 });
 
 When(/^User log out from aplication/, async () => {
-    await homePage.menuButton.click();
-    await homePage.logoutButton.click();
+   await homePage.logOut();
 
 });
 Then(/^User display loginBttn/, async () => {
@@ -92,7 +91,7 @@ When(/^User add item and reset application/, async () => {
 });
 
 Then(/^Item is not selected/, async () => {
-    await expect(homePage.removeButtonItemBackpack).toBeDisplayed();
+    await expect(homePage.addButtonItemBackpack).toBeDisplayed();
 });
 
 Then(/^User should see two item in checkout page/, async () => {
