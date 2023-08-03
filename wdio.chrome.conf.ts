@@ -135,7 +135,7 @@ export const config: Options.Testrunner = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: [['allure', {outputDir: './allure-results',disableWebdriverStepsReporting: true,
+    reporters: ["spec",['allure', {outputDir: './allure-results',disableWebdriverStepsReporting: true,
     disableWebdriverScreenshotsReporting: false,}]],
 
     //
@@ -178,16 +178,16 @@ export const config: Options.Testrunner = {
      * @param {object} config wdio configuration object
      * @param {Array.<Object>} capabilities list of capabilities details
      */
-     onPrepare: function (config, capabilities) {
-        beforeEach(function () {
+    // onPrepare: function (config, capabilities) {
+      //  beforeEach(function () {
             // Eğer gerekliyse, bekleyebilirsiniz.
-            browser.waitBeforeScreenshot(1000);
+      //      browser.waitBeforeScreenshot(1000);
       
             // Ekran görüntüsü alınması için komutu çağırın.
-            browser.takeScreenshot();
-          });
+       //     browser.takeScreenshot();
+      //    });
           
-     },
+     //},
     /**
      * Gets executed before a worker process is spawned and can be used to initialise specific service
      * for that worker as well as modify runtime environments in an async fashion.
@@ -275,9 +275,12 @@ export const config: Options.Testrunner = {
       //  if (error) {
        //   await browser.takeScreenshot();
    // }
-       afterStep: async function (step, scenario, { error, duration, passed }, context) {
+       afterStep: async function (step, scenario, { error }, context) {
         
-          await browser.takeScreenshot();
+        if(error){
+            await browser.takeScreenshot();
+        }
+         
         
       }
 }
