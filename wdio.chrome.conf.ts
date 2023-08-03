@@ -65,9 +65,9 @@ export const config: Options.Testrunner = {
     //
     capabilities: [{
         browserName: 'chrome',
-        'goog:chromeOptions': {
-          args: ['--headless', '--disable-gpu'] // Tarayıcıyı başlatırken kullanılacak seçenekleri burada belirtebilirsiniz.
-        }
+        'wdiodevtoolsOptions': {
+                headless: true
+            }
       }],
 
     //
