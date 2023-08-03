@@ -34,7 +34,6 @@
     "wdio-safari": "wdio run ./wdio.safari.conf.ts",
     "wdio-firefox": "wdio run ./wdio.firefox.conf.ts",
     "wdio-edge": "wdio run ./wdio.edge.conf.ts",
-    "wdio-selenium": "wdio run ./wdio.selenium.conf.ts",
     "allure-report": "allure generate --clean allure-results -o allure-report"
   }
 }

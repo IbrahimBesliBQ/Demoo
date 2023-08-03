@@ -1,19 +1,9 @@
-import { Options } from '@wdio/types'
+import  { Options } from '@wdio/types'
 
 
-
-//const __dirname = url.fileURLToPath(new URL('.', import.meta.url))
 let baseUrl = "https://www.saucedemo.com/";
-//let env = process.env.Env
-//let urls = {
-  //  qa: "https://www.saucedemo.com/",
-    //dev: "https://www.saucedemo.com/",
-    //prod: "https://www.saucedemo.com/",
-//}
-//baseUrl = urls[env]
 
 export const config: Options.Testrunner = {
-   
     //
     // ====================
     // Runner Configuration
@@ -44,7 +34,9 @@ export const config: Options.Testrunner = {
     // then the current working directory is where your `package.json` resides, so `wdio`
     // will be called from there.
     //
-    specs: ['./test/features/*.feature'],
+    specs: [
+        './test/features/*.feature'
+    ],
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
@@ -72,11 +64,11 @@ export const config: Options.Testrunner = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{
-      browserName: 'chrome',
-      'wdio:devtoolsOptions': {
-          headless: true
-      }
-  }],
+        browserName: 'chrome',
+        'goog:chromeOptions': {
+          args: ['--headless', '--disable-gpu'] // Tarayıcıyı başlatırken kullanılacak seçenekleri burada belirtebilirsiniz.
+        }
+      }],
 
     //
     // ===================
@@ -86,7 +78,6 @@ export const config: Options.Testrunner = {
     //
     // Level of logging verbosity: trace | debug | info | warn | error | silent
     logLevel: 'info',
-   // outputDir: path.resolve(__dirname, 'logs'),
     //
     // Set specific log levels per logger
     // loggers:
@@ -110,7 +101,6 @@ export const config: Options.Testrunner = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    //baseUrl: 'http://localhost',
     baseUrl: baseUrl,
     //
     // Default timeout for all waitFor* commands.
@@ -127,7 +117,9 @@ export const config: Options.Testrunner = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: ['chromedriver'],
+    services: [
+        'chromedriver'
+    ],
 
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
@@ -149,7 +141,10 @@ export const config: Options.Testrunner = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec',['allure', {outputDir: './allure-report'}]],
+    reporters: ['spec',['allure', {outputDir: './allure-report',disableWebdriverStepsReporting: false,
+    disableWebdriverScreenshotsReporting: false,
+    useCucumberStepReporter: true,
+    }]],
 
     //
     // If you are using Cucumber you need to specify the location of your step definitions.
@@ -192,15 +187,7 @@ export const config: Options.Testrunner = {
      * @param {Array.<Object>} capabilities list of capabilities details
      */
     // onPrepare: function (config, capabilities) {
-      //  beforeEach(function () {
-            // Eğer gerekliyse, bekleyebilirsiniz.
-          //  browser.waitBeforeScreenshot(1000);
-      
-            // Ekran görüntüsü alınması için komutu çağırın.
-         //   browser.takeScreenshot();
-         // });
-          
-     //},
+    // },
     /**
      * Gets executed before a worker process is spawned and can be used to initialise specific service
      * for that worker as well as modify runtime environments in an async fashion.
@@ -288,14 +275,12 @@ export const config: Options.Testrunner = {
       //  if (error) {
        //   await browser.takeScreenshot();
    // }
-      // ...
-
-  afterStep: async function (step, scenario, { error, duration, passed }, context) {
-    await browser.takeScreenshot();
-  },
-
-// ...
-
+       afterStep: async function (step, scenario, { error, duration, passed }, context) {
+        if (error) {
+          await browser.takeScreenshot();
+        }
+      }
+}
 
     /**
      *
@@ -352,10 +337,10 @@ export const config: Options.Testrunner = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {<Object>} results object containing test results
      */
-  
-     // onComplete: function(exitCode, config, capabilities, results) {
+ // onComplete: function(exitCode, config, capabilities, results) {
     // },
     /**
+
     
     /**
     * Gets executed when a refresh happens.
@@ -364,4 +349,3 @@ export const config: Options.Testrunner = {
     */
     // onReload: function(oldSessionId, newSessionId) {
     // }
-}
