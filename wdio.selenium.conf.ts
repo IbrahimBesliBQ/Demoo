@@ -3,7 +3,11 @@ import  { Options } from '@wdio/types'
 
 let baseUrl = "https://www.saucedemo.com/";
 
-
+const drivers = {
+    chrome: { version: '112.0.5615.49.101' }, // https://chromedriver.chromium.org/
+    firefox: { version: '0.33.0' }, // https://github.com/mozilla/geckodriver/releases
+    chromiumedge: { version: '114.0.1791.0' } // https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/
+}
 
 
 
@@ -61,7 +65,7 @@ export const config: Options.Testrunner = {
     // and 30 processes will get spawned. The property handles how many capabilities
     // from the same test should run tests.
     //
-    maxInstances: 1,
+    maxInstances: 10,
     //
     // If you have trouble getting all important capabilities together, check out the
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
@@ -122,7 +126,7 @@ export const config: Options.Testrunner = {
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
     services: [
-        'chromedriver'
+        ['selenium-standalone', { drivers: { firefox: '0.33.0', chrome: true, chromiumedge: 'latest' } }]
     ],
 
     // Framework you want to run your specs with.

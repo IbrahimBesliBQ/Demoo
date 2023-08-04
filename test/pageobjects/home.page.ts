@@ -52,6 +52,9 @@ class HomePage extends Page {
         return $('.shopping_cart_badge')
     }
 
+    public get exitBtn(){
+        return $('#react-burger-cross-btn')
+    }
     // methods
     async open(){
         await super.open("/");

@@ -91,7 +91,9 @@ When(/^User add item and reset application/, async () => {
 });
 
 Then(/^Item is not selected/, async () => {
-    await expect(homePage.addButtonItemBackpack).toBeDisplayed();
+    await homePage.exitBtn.click()
+
+    await expect(homePage.addButtonItemBikeLight).toBeDisplayed();
 });
 
 Then(/^User should see two item in checkout page/, async () => {
