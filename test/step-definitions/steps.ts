@@ -87,11 +87,12 @@ Then(/^User display loginBttn/, async () => {
 });
 
 When(/^User add item and reset application/, async () => {
-    await homePage.addBackpackItemAndResetApp();
+    await homePage.addButtonItemBackpack.click()
+    await homePage.removeButtonItemBackpack.click();
 });
 
 Then(/^Item is not selected/, async () => {
-    await homePage.exitBtn.click()
+
 
     await expect(homePage.addButtonItemBikeLight).toBeDisplayed();
 });
