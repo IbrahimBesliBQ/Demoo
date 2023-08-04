@@ -3,14 +3,6 @@ import  { Options } from '@wdio/types'
 
 let baseUrl = "https://www.saucedemo.com/";
 
-const drivers = {
-    chrome: { version: '112.0.5615.49.101' }, // https://chromedriver.chromium.org/
-    firefox: { version: '0.33.0' }, // https://github.com/mozilla/geckodriver/releases
-    chromiumedge: { version: '114.0.1791.0' } // https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/
-}
-
-
-
 export const config: Options.Testrunner = {
     //
     // ====================
@@ -72,13 +64,19 @@ export const config: Options.Testrunner = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{
+        maxInstances: 1,
         browserName: 'chrome',
+        acceptInsecureCerts: true,
         'goog:chromeOptions': {
-          args: ['--headless', '--disable-gpu'] // Tarayıcıyı başlatırken kullanılacak seçenekleri burada belirtebilirsiniz.
+            args: [
+                '--no-sandbox',
+                '--disable-infobars',
+                '--headless',
+                '--disable-gpu',
+                '--window-size=1440,735'
+            ],
         }
-      }],
-
-    //
+    }],    //
     // ===================
     // Test Configurations
     // ===================
@@ -125,10 +123,7 @@ export const config: Options.Testrunner = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: [
-        ['selenium-standalone', { drivers: { firefox: '0.33.0', chrome: true, chromiumedge: 'latest' } }]
-    ],
-
+   
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
     // see also: https://webdriver.io/docs/frameworks
