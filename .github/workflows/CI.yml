@@ -12,7 +12,7 @@ jobs:
         - name: Install
           run: npm install
         - name: Test
-          run: npm run wdio-chrome
+          run: npm run wdio-edge
         - uses: actions/upload-artifact@v3
           if: failure()
           with:
