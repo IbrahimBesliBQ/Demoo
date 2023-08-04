@@ -73,8 +73,10 @@ export const config: Options.Testrunner = {
     //
     capabilities: [{
         browserName: 'chrome',
-      'wdio:devtoolsOptions': {
-           headless: true
+      'goog:chromeOptions':{
+        args: [
+        '--headless=new'
+        ]
       //  },
     }  }],
 
@@ -290,7 +292,8 @@ export const config: Options.Testrunner = {
    // }
       // ...
 
-  afterStep: async function (step, scenario, { error, duration, passed }, context) {
+      
+  afterStep: async function () {
     await browser.takeScreenshot();
   },
 
