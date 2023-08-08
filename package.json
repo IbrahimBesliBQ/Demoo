@@ -35,6 +35,6 @@
     "wdio-firefox": "wdio run ./wdio.firefox.conf.ts --cucumberOpts.tagExpression=@smoke",
     "wdio-edge": "wdio run ./wdio.edge.conf.ts ",
     "wdio": "wdio run ./wdio.conf.ts",
-    "allure-report": "allure generate --clean allure-results -o allure-report"
+    "allure-report": "allure generate [allure_output_dir] && allure open"
   }
 }
